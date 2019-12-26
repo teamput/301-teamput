@@ -6,7 +6,7 @@ Group members: Isaac Nelson, Vik Akam, Pete Alba, Laura Antonius
 
 ## Database Entity Relationship Diagram
 
-![Database ERD](database_ERD_img/database_ERD.png)
+![Database ERD](database_erd_img/database_ERD.png)
 
 ## Our Wireframe
 
