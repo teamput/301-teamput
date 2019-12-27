@@ -5,22 +5,32 @@ const app = express();
 require('ejs');
 require('dotenv').config();
 const PORT = process.env.PORT || 3001;
+const client = require('./lib/client');
 
 app.set('view engine', 'ejs');
-app.use(express.static('/public'));
+app.use(express.static('./public'));
 app.use(express.urlencoded());
 
 // api JS
 const getYelpResults = require('./lib/yelp/yelp');
 const getEventsResults = require('./lib/events/getEventsResults');
 
-
 // routes
 app.get('/', getHome);
-app.post('/result', getYelpResults);
+app.get('/result', getYelpResults);
 app.get('/result', getEventsResults);
 app.get('/aboutUs', aboutUs);
 app.get('/quiz', displayQuiz);
+app.put('/quiz', submitQuiz);
+app.delete('/result', deleteDbInfo);
+
+function deleteDbInfo(request, response) {
+  let location = request.location;
+  let sql = 'DELETE FROM user_info WHERE location=$1;';
+  let safeValues = [location];
+  client.query(sql, safeValues);
+  response.redirect('/');
+}
 
 if (dbHasContent) {
   app.put('/quiz', getLocPutdb)
@@ -34,7 +44,7 @@ function aboutUs(request, response) {
   response.render('pages/aboutUs');
 }
 
-function displayQuiz(request, response) {
+function displayQuiz(response) {
   response.render('pages/quiz');
 }
 
@@ -56,6 +66,12 @@ function getLocPutdb(request, response) {
   client.query(sql, safeValues);
   response.redirect('/result'); 
   }
+
+
+
+function submitQuiz(request, response) {
+
+}
 
 
 app.use('*', (request, response) => {
