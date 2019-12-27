@@ -1,0 +1,12 @@
+<% eventsList.forEach(event => { %>
+<section>
+
+  <a href="<%= event.url %>">More Info</a>
+  <p><%= event.title %></p>
+  <p><%= event.venue_name %></p>
+  <p><%= event.city_name %></p>
+  <p><%= event.start_time %></p>
+  <p><%= event.description %></p>
+
+</section>
+<% }) %>
