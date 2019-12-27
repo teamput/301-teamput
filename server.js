@@ -22,6 +22,15 @@ app.get('/result', getEventsResults);
 app.get('/aboutUs', aboutUs);
 app.get('/quiz', displayQuiz);
 app.put('/quiz', submitQuiz);
+app.delete('/result', deleteDbInfo);
+
+function deleteDbInfo(request, response) {
+  let location = request.location;
+  let sql = 'DELETE FROM user_info WHERE location=$1;';
+  let safeValues = [location];
+  client.query(sql, safeValues);
+  response.redirect('/');
+}
 
 function getHome(request, response) {
   response.render('pages/index');
