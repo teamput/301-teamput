@@ -1,0 +1,27 @@
+{
+  "name": "301-teamput",
+  "version": "1.0.0",
+  "description": "Project Name: I'm Bored! An app that suggests things for you to do when you've got nothing else to do.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamput/301-teamput.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamput/301-teamput/issues"
+  },
+  "homepage": "https://github.com/teamput/301-teamput#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "superagent": "^5.1.3"
+  }
+}
