@@ -15,4 +15,53 @@
 
 <h1>The I'm Bored Quiz</h1>
 
+<form action="" method="post">
+    <fieldset>
+        <h3>Where do you live?</h3>
+        <input id="locationInput" type="text" name="location" placeholder="last location" required>
+    </fieldset>
+
+    <fieldset>
+        <h3> Are you feeling hungry?</h3>
+        <label for="yes">
+            <input type="radio" name="hunger" value="yes" required>
+        </label>
+        <label for="no">
+            <input type="radio" name="hunger" value="no" required>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <h3>Choose your top interest from this list</h3>
+        <label for="concerts">
+            <input type="radio" name="interest" value="concert" required>
+        </label>
+        <label for="festivals">
+            <input type="radio" name="interest" value="festivals" required>
+        </label>
+        <label for="comedy">
+            <input type="radio" name="interest" value="comedy" required>
+        </label>
+        <label for="family">
+            <input type="radio" name="interest" value="family" required>
+        </label>
+        <label for="nightlife">
+            <input type="radio" name="interest" value="nightlife" required>
+        </label>
+        <label for="performing arts">
+            <input type="radio" name="interest" value="performing arts" required>
+        </label>
+        <label for="sports">
+            <input type="radio" name="interest" value="sports" required>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <h3> Tell us your favorite artist </h3>
+        <input type="text" name="music" placeholder=" musician">
+    </fieldset>
+    <button type="submit">Search the Google Books API</button>
+
+</form>
+
 </html>
