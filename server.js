@@ -20,6 +20,7 @@ app.get('/', getHome);
 app.post('/result', getYelpResults);
 app.get('/result', getEventsResults);
 app.get('/aboutUs', aboutUs);
+app.get('/quiz', displayQuiz);
 
 function getHome(request, response) {
   response.render('pages/index');
@@ -27,6 +28,10 @@ function getHome(request, response) {
 
 function aboutUs(request, response) {
   response.render('pages/aboutUs');
+}
+
+function displayQuiz(request, response) {
+  response.render('pages/quiz');
 }
 
 app.use('*', (request, response) => {
