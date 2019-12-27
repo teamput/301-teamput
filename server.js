@@ -7,7 +7,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3001;
 
 app.set('view engine', 'ejs');
-app.use(express.static('/public'));
+app.use(express.static('./public'));
 app.use(express.urlencoded());
 
 // api JS
