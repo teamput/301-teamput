@@ -4,21 +4,18 @@ const express = require('express');
 const app = express();
 require('ejs');
 require('dotenv').config();
-
-// api JS
-const yelp = require('./lib/yelp/yelp');
-
 const PORT = process.env.PORT || 3001;
 
 app.set('view engine', 'ejs');
-
 app.use(express.static('/public'));
-
 app.use(express.urlencoded());
 
-app.get('/', getHome);
+// api JS
+const getYelpResults = require('./lib/yelp/yelp');
 
-app.post('/result', yelp);
+// routes
+app.get('/', getHome);
+app.post('/result', getYelpResults);
 
 function getHome(request, response) {
     response.render('pages/index');
