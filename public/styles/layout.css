@@ -1,0 +1,22 @@
+header {
+    border: rgb(255, 255, 255) .5px solid;
+    background-color: rgb(111, 111, 153);
+    width: 408px;
+    height: 64px;
+    margin: 0px;
+    
+}
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+section {
+    border: rgb(255, 255, 255) .5px solid;
+    background-color: rgb(189, 189, 235);
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    /* align-self: initial; */
+}
