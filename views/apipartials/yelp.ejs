@@ -1,0 +1,11 @@
+<% restaurantList.forEach(restaurant => { %>
+<section>
+  <img src="<%= restaurant.image_url %>" alt="<%= restaurant.name %>">
+  <p><%= restaurant.name %></p>
+  <p><%= restaurant.is_closed %></p>
+  <p><%= restaurant_rating %></p>
+  <p><%= restaurant.price %></p>
+  <p><%= restaurant.phone %></p>
+  <p><%= restaurant.distance %></p>
+</section>
+<% }) %>
