@@ -5,7 +5,9 @@ const app = express();
 require('ejs');
 require('dotenv').config();
 
-const superagent = require('superagent');
+// api JS
+const yelp = require('./lib/yelp/yelp');
+
 const PORT = process.env.PORT || 3001;
 
 app.set('view engine', 'ejs');
@@ -16,7 +18,9 @@ app.use(express.urlencoded());
 
 app.get('/', getHome);
 
-function getHome(request, response){
+app.post('/result', yelp);
+
+function getHome(request, response) {
     response.render('pages/index');
 }
 
