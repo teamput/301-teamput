@@ -14,10 +14,8 @@
 </head>
 
 <h1>The I'm Bored Quiz</h1>
-<form action='/quiz' method='post'>
+<form id="details-form" action="<%= '/quiz?_method=PUT' %>" method='post'>
 
-
-<form action="" method="post">
     <fieldset>
         <h3>Where do you live?</h3>
         <input id="locationInput" type="text" name="location" placeholder="last location" required>
@@ -62,7 +60,7 @@
         <h3> Tell us your favorite artist </h3>
         <input type="text" name="music" placeholder=" musician">
     </fieldset>
-    <button type="submit">Search the Google Books API</button>
+    <button type="submit">Find that fun!</button>
 
 </form>
 
