@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Project Name: I'm Bored! An app that suggests things for you to do when you've got nothing else to do.",
   "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -22,6 +25,7 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "pg": "^7.16.0",
     "superagent": "^5.1.3"
   }
 }
