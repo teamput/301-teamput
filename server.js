@@ -18,11 +18,11 @@ app.get('/', getHome);
 app.post('/result', getYelpResults);
 
 function getHome(request, response) {
-    response.render('pages/index');
+  response.render('pages/index');
 }
 
 app.use('*', (request, response) => {
-    response.status(404).send(`page not found`);
-})
+  response.status(404).send(`page not found`);
+});
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
