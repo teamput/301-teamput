@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS user_info(
   lat NUMERIC(10, 7),
   long NUMERIC(10, 7),
   location VARCHAR(255),
-  hungry bit,
-  interest VARCHAR(255)
+  hunger VARCHAR,
+  interest VARCHAR(255),
+  music VARCHAR(255)
 );
-INSERT INTO user_info (lat, long, location, hungry, interest) VALUES (12.123123123, 12.1234242, 'seattle', '1', 'sports');
+INSERT INTO user_info (lat, long, location, hunger, interest, music) VALUES (12.123123123, 12.1234242, 'seattle', 'yes', 'sports', 'the beatles');
