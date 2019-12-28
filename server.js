@@ -36,21 +36,22 @@ function deleteDbInfo(request, response) {
   response.redirect('/');
 }
 
-function showAllResults(request, response) {
 
-  let sql = 'SELECT * FROM user_info;';
-  client.query(sql)
-    .then(results => {
-      let answers = results.rows[0];
-      getYelpResults(request, response, answers);
-      //    response.render('pages/result')
-
-    })
-    .catch(error => console.error(error));
-
-  // response.render('pages/result')
-
-}
+function showAllResults(request, response){
+    let sql = 'SELECT * FROM user_info;';
+    client.query(sql)
+        .then(results => {
+            let answers = results.rows[0];
+            // let restaurantList = getYelpResults(request, response, answers);
+            // let eventsList = getEventsResults(request, response, answers);
+            
+            let promises = [getYelpResults, getEventsResults];
+            Promises.all(promises)
+                .then(results => {
+                    console.log(results);
+                })
+        });
+};
 
 
 function getHome(request, response) {
