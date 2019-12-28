@@ -2,5 +2,5 @@ body {
     max-width: 480px;
     display: flex;
     flex-wrap: wrap;
-    background-color: black;
+    /* background-color: black; */
 }
