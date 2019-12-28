@@ -17,14 +17,13 @@ app.use(express.static('./public'));
 app.use(express.urlencoded());
 
 
-// // api JS
+// api JS
 const getYelpResults = require('./lib/yelp/yelp');
 const getEventsResults = require('./lib/events/getEventsResults');
 
 // routes
 app.get('/', getHome);
 app.get('/result', showAllResults);
-// app.get('/result', getEventsResults);
 app.get('/aboutUs', aboutUs);
 app.get('/quiz', displayQuiz);
 app.put('/quiz', getLocPutdb);
@@ -64,7 +63,6 @@ function displayQuiz(request, response) {
   response.render('pages/quiz');
 }
 
-
 //gets form data, calls geocode api, and updates that data to the database
 function getLocPutdb(request, response) {
   let city = request.body.location;
@@ -103,12 +101,9 @@ function getLocPutdb(request, response) {
 
 }
 
-
-
-
 app.use('*', (request, response) => {
   response.status(404).send('page not found');
 });
 client.connect(() => {
   app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
-})
+});
