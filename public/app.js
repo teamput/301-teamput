@@ -15,3 +15,11 @@ mobileClick();
 $(main).click(
     alert('bla')
 )
+
+$.ajax({
+    url: '/result', 
+    method: 'GET',
+    data: {data : resturaunt}
+}) .then (results =>{
+    console.log(results)
+})

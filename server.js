@@ -41,12 +41,16 @@ function showAllResults(request, response) {
     let sql = 'SELECT * FROM user_info;';
     client.query(sql)
         .then(results => {
-            let answers = results.rows[0];
-            getYelpResults(request, response, results.rows[0]);
-            //    response.render('pages/result')
+           let answers = results.rows[0];
+           return getYelpResults(request, response, answers);
+        //    getEventsResults(request, response, answers);
 
+      
+        //    response.render('pages/result', {
+
+           });
         })
-    // response.render('pages/result')
+
 }
 
 
@@ -68,6 +72,7 @@ function getLocPutdb(request, response) {
     let city = request.body.location;
     let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${process.env.GEOCODE_API_KEY}`
     superagent.get(url)
+
         .then(results => {
             let locationObject = {
                 location: results.body.results[0].formatted_address,
@@ -83,6 +88,7 @@ function getLocPutdb(request, response) {
 
         })
         .catch(error => console.error(error));
+
 }
 
 
