@@ -2,17 +2,66 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="/public/styles/reset.css">
-  <link rel="stylesheet" href="/public/styles/base.css">
-  <link rel="stylesheet" href="/public/styles/layout.css">
-  <link rel="stylesheet" href="/public/styles/modules.css">
-  <link rel="stylesheet" href="/public/styles/state.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>I'm Bored</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/state.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>I'm Bored</title>
 </head>
 
 <h1>The I'm Bored Quiz</h1>
+<form id="details-form" action="<%= '/quiz?_method=PUT' %>" method='post'>
+
+    <fieldset>
+        <h3>Where do you live?</h3>
+        <input id="locationInput" type="text" name="location" placeholder="last location" required>
+    </fieldset>
+
+    <fieldset>
+        <h3> Are you feeling hungry?</h3>
+        <label for="yes">Yes
+            <input type="radio" name="hunger" value="yes" required>
+        </label>
+        <label for="no">No
+            <input type="radio" name="hunger" value="no" required>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <h3>Choose your top interest from this list:</h3>
+        <label for="concerts">Concerts
+            <input type="radio" name="interest" value="concert" required>
+        </label>
+        <label for="festivals">Festivals
+            <input type="radio" name="interest" value="festivals" required>
+        </label>
+        <label for="comedy">Comedy
+            <input type="radio" name="interest" value="comedy" required>
+        </label>
+        <label for="family">Family
+            <input type="radio" name="interest" value="family" required>
+        </label>
+        <label for="nightlife">Nightlife
+            <input type="radio" name="interest" value="nightlife" required>
+        </label>
+        <label for="performing arts">Performing Arts
+            <input type="radio" name="interest" value="performing arts" required>
+        </label>
+        <label for="sports">Sports
+            <input type="radio" name="interest" value="sports" required>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <h3> Tell us the name of your favorite artist:</h3>
+        <input type="text" name="music" placeholder="musician">
+    </fieldset>
+    <button type="submit">Find that fun!</button>
+
+</form>
 
 </html>
