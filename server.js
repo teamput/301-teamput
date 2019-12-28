@@ -42,11 +42,15 @@ function showAllResults(request, response){
     client.query(sql)
         .then(results => {
            let answers = results.rows[0];
-           getYelpResults(request, response, results.rows[0]);
-        //    response.render('pages/result')
-           
+           return getYelpResults(request, response, answers);
+        //    getEventsResults(request, response, answers);
+
+      
+        //    response.render('pages/result', {
+
+           });
         })
-        // response.render('pages/result')
+
 }
 
 
@@ -82,6 +86,7 @@ function getLocPutdb(request, response) {
         response.redirect('/result');
 
     })
+    
 }
 
 
