@@ -22,7 +22,7 @@ const getEventsResults = require('./lib/events/getEventsResults');
 
 // routes
 app.get('/', getHome);
-// app.get('/result', getYelpResults);
+app.get('/result', showAllResults);
 // app.get('/result', getEventsResults);
 app.get('/aboutUs', aboutUs);
 app.get('/quiz', displayQuiz);
@@ -37,16 +37,21 @@ function deleteDbInfo(request, response) {
     response.redirect('/');
 }
 
-
+function showAllResults(request, response){
+    let sql = 'SELECT * FROM user_info;';
+    client.query(sql)
+        .then(results => {
+           let answers = results.rows[0];
+           getYelpResults(request, response, results.rows[0]);
+        //    response.render('pages/result')
+           
+        })
+        // response.render('pages/result')
+}
 
 
 function getHome(request, response) {
     response.render('pages/index');
-    // let sql = 'SELECT * FROM user_info;';
-    // client.query(sql)
-    //     .then(results => {
-    //         response.send(results.rows);
-    //     })
 }
 
 function aboutUs(request, response) {
@@ -57,20 +62,8 @@ function displayQuiz(request, response) {
     response.render('pages/quiz');
 }
 
-let getLocation = function(city){
-    // let city = request.body.location;
-    let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${process.env.GEOCODE_API_KEY}`
-    superagent.get(url)
-    .then(results => {
-        let locationObject = {
-            location: results.body.results[0].formatted_address,
-            lat: results.body.results[0].geometry.location.lat,
-            lng: results.body.results[0].geometry.location.lng
-        }
-        return locationObject;
-    })
-}
 
+//gets form data, calls geocode api, and updates that data to the database
 function getLocPutdb(request, response) {
     let city = request.body.location;
     let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${process.env.GEOCODE_API_KEY}`
@@ -81,10 +74,8 @@ function getLocPutdb(request, response) {
             lat: results.body.results[0].geometry.location.lat,
             lng: results.body.results[0].geometry.location.lng
         }
-        // let city = getLocation(request.body.location)
         
         let { hunger, interest, music } = request.body;
-        // console.log(hunger, interest, music);
         let sql = 'UPDATE user_info SET hunger=$1, interest=$2, music=$3, location=$5, lat=$6, long=$7 WHERE user_id=$4 returning user_id;';
         let safeValues = [hunger, interest, music, 1, locationObject.location, locationObject.lat, locationObject.lng];
         client.query(sql, safeValues);
