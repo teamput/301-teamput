@@ -37,6 +37,7 @@ function deleteDbInfo(request, response) {
 }
 
 function showAllResults(request, response) {
+
   let sql = 'SELECT * FROM user_info;';
   client.query(sql)
     .then(results => {
@@ -48,6 +49,7 @@ function showAllResults(request, response) {
     .catch(error => console.error(error));
 
   // response.render('pages/result')
+
 }
 
 
@@ -67,6 +69,7 @@ function displayQuiz(request, response) {
 //gets form data, calls geocode api, and updates that data to the database
 function getLocPutdb(request, response) {
 
+
   let city = request.body.location;
   let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${process.env.GEOCODE_API_KEY}`;
   superagent.get(url)
@@ -82,10 +85,9 @@ function getLocPutdb(request, response) {
       let sql = 'SELECT * FROM user_info;';
       client.query(sql)
         .then(results => {
-          console.log(results.rows);
+         
 
           if (results.rows.length > 0) {
-            console.log('in the if');
 
             let sql = 'UPDATE user_info SET hunger=$1, interest=$2, music=$3, location=$4, lat=$5, long=$6 WHERE user_id IS NOT NULL;';
             let safeValues = [hunger, interest, music, locationObject.location, locationObject.lat, locationObject.lng];
@@ -97,10 +99,12 @@ function getLocPutdb(request, response) {
           }
 
         })
+
       response.redirect('/result');
 
     })
     .catch(error => console.error(error));
+
 }
 
 
