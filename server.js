@@ -26,71 +26,89 @@ app.get('/result', showAllResults);
 // app.get('/result', getEventsResults);
 app.get('/aboutUs', aboutUs);
 app.get('/quiz', displayQuiz);
-app.put('/quiz', getLocPutdb)
+app.put('/quiz', getLocPutdb);
 app.delete('/result', deleteDbInfo);
+app.delete('/', deleteDbInfo);
 
 function deleteDbInfo(request, response) {
-    let location = request.location;
-    let sql = 'DELETE FROM user_info WHERE location=$1;';
-    let safeValues = [location];
-    client.query(sql, safeValues);
-    response.redirect('/');
+  let sql = 'DELETE FROM user_info;';
+  client.query(sql);
+  response.redirect('/');
 }
 
 function showAllResults(request, response) {
-    let sql = 'SELECT * FROM user_info;';
-    client.query(sql)
-        .then(results => {
-            let answers = results.rows[0];
-            getYelpResults(request, response, results.rows[0]);
-            //    response.render('pages/result')
+  let sql = 'SELECT * FROM user_info;';
+  client.query(sql)
+    .then(results => {
+      let answers = results.rows[0];
+      getYelpResults(request, response, answers);
+      //    response.render('pages/result')
 
-        })
-    // response.render('pages/result')
+    })
+    .catch(error => console.error(error));
+
+  // response.render('pages/result')
 }
 
 
 function getHome(request, response) {
-    response.render('pages/index');
+  response.render('pages/index');
 }
 
 function aboutUs(request, response) {
-    response.render('pages/aboutUs');
+  response.render('pages/aboutUs');
 }
 
 function displayQuiz(request, response) {
-    response.render('pages/quiz');
+  response.render('pages/quiz');
 }
 
 
 //gets form data, calls geocode api, and updates that data to the database
 function getLocPutdb(request, response) {
-    let city = request.body.location;
-    let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${process.env.GEOCODE_API_KEY}`
-    superagent.get(url)
-        .then(results => {
-            let locationObject = {
-                location: results.body.results[0].formatted_address,
-                lat: results.body.results[0].geometry.location.lat,
-                lng: results.body.results[0].geometry.location.lng,
-            }
 
-            let { hunger, interest, music, } = request.body;
-            let sql = 'UPDATE user_info SET hunger=$1, interest=$2, music=$3, location=$5, lat=$6, long=$7 WHERE user_id=$4 returning user_id;';
-            let safeValues = [hunger, interest, music, 1, locationObject.location, locationObject.lat, locationObject.lng];
+  let city = request.body.location;
+  let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${process.env.GEOCODE_API_KEY}`;
+  superagent.get(url)
+    .then(results => {
+      let locationObject = {
+        location: results.body.results[0].formatted_address,
+        lat: results.body.results[0].geometry.location.lat,
+        lng: results.body.results[0].geometry.location.lng,
+      }
+
+      let { hunger, interest, music, } = request.body;
+
+      let sql = 'SELECT * FROM user_info;';
+      client.query(sql)
+        .then(results => {
+          console.log(results.rows);
+
+          if (results.rows.length > 0) {
+            console.log('in the if');
+
+            let sql = 'UPDATE user_info SET hunger=$1, interest=$2, music=$3, location=$4, lat=$5, long=$6 WHERE user_id IS NOT NULL;';
+            let safeValues = [hunger, interest, music, locationObject.location, locationObject.lat, locationObject.lng];
             client.query(sql, safeValues);
-            response.redirect('/result');
+          } else {
+            let sql = 'INSERT INTO user_info (hunger, interest, music, location, lat, long) VALUES ($1, $2, $3, $4, $5, $6);';
+            let safeValues = [hunger, interest, music, locationObject.location, locationObject.lat, locationObject.lng];
+            client.query(sql, safeValues);
+          }
 
         })
-        .catch(error => console.error(error));
+      response.redirect('/result');
+
+    })
+    .catch(error => console.error(error));
 }
 
 
 
 
 app.use('*', (request, response) => {
-    response.status(404).send('page not found');
+  response.status(404).send('page not found');
 });
 client.connect(() => {
-    app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+  app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 })
