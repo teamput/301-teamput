@@ -37,22 +37,21 @@ function deleteDbInfo(request, response) {
     response.redirect('/');
 }
 
-function showAllResults(request, response) {
+function showAllResults(request, response){
     let sql = 'SELECT * FROM user_info;';
     client.query(sql)
         .then(results => {
-           let answers = results.rows[0];
-           return getYelpResults(request, response, answers);
-        //    getEventsResults(request, response, answers);
-
-      
-        //    response.render('pages/result', {
-
-           });
-        })
-
-}
-
+            let answers = results.rows[0];
+            // let restaurantList = getYelpResults(request, response, answers);
+            // let eventsList = getEventsResults(request, response, answers);
+            
+            let promises = [getYelpResults, getEventsResults];
+            Promises.all(promises)
+                .then(results => {
+                    console.log(results);
+                })
+        });
+};
 
 function getHome(request, response) {
     response.render('pages/index');
