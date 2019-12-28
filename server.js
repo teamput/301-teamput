@@ -19,7 +19,7 @@ app.use(express.urlencoded());
 
 // // api JS
 const getYelpResults = require('./lib/yelp/yelp');
-// const getEventsResults = require('./lib/events/getEventsResults');
+const getEventsResults = require('./lib/events/getEventsResults');
 
 // routes
 app.get('/', getHome);
@@ -42,10 +42,10 @@ function showAllResults(request, response) {
   client.query(sql)
     .then(results => {
       let answers = results.rows[0];
-      let promises = [getYelpResults(answers)];
+      let promises = [getYelpResults(answers), getEventsResults(answers)];
       Promise.all(promises)
         .then(result => {
-          response.render('pages/result', { restaurantList: result[0], });
+          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], });
         })
         .catch(err => console.log(err));
     })
@@ -75,7 +75,7 @@ function getLocPutdb(request, response) {
         location: results.body.results[0].formatted_address,
         lat: results.body.results[0].geometry.location.lat,
         lng: results.body.results[0].geometry.location.lng,
-      }
+      };
 
       let { hunger, interest, music, } = request.body;
 
