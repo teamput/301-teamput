@@ -37,7 +37,7 @@ function deleteDbInfo(request, response) {
     response.redirect('/');
 }
 
-function showAllResults(request, response){
+function showAllResults(request, response) {
     let sql = 'SELECT * FROM user_info;';
     client.query(sql)
         .then(results => {
@@ -72,21 +72,23 @@ function getLocPutdb(request, response) {
     let city = request.body.location;
     let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${process.env.GEOCODE_API_KEY}`
     superagent.get(url)
-    .then(results => {
-        let locationObject = {
-            location: results.body.results[0].formatted_address,
-            lat: results.body.results[0].geometry.location.lat,
-            lng: results.body.results[0].geometry.location.lng
-        }
-        
-        let { hunger, interest, music } = request.body;
-        let sql = 'UPDATE user_info SET hunger=$1, interest=$2, music=$3, location=$5, lat=$6, long=$7 WHERE user_id=$4 returning user_id;';
-        let safeValues = [hunger, interest, music, 1, locationObject.location, locationObject.lat, locationObject.lng];
-        client.query(sql, safeValues);
-        response.redirect('/result');
 
-    })
-    
+        .then(results => {
+            let locationObject = {
+                location: results.body.results[0].formatted_address,
+                lat: results.body.results[0].geometry.location.lat,
+                lng: results.body.results[0].geometry.location.lng,
+            }
+
+            let { hunger, interest, music, } = request.body;
+            let sql = 'UPDATE user_info SET hunger=$1, interest=$2, music=$3, location=$5, lat=$6, long=$7 WHERE user_id=$4 returning user_id;';
+            let safeValues = [hunger, interest, music, 1, locationObject.location, locationObject.lat, locationObject.lng];
+            client.query(sql, safeValues);
+            response.redirect('/result');
+
+        })
+        .catch(error => console.error(error));
+
 }
 
 
