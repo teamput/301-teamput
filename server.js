@@ -16,7 +16,6 @@ app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 app.use(express.urlencoded());
 
-
 // api JS
 const getYelpResults = require('./lib/yelp/yelp');
 const getEventsResults = require('./lib/events/getEventsResults');
@@ -38,16 +37,17 @@ function deleteDbInfo(request, response) {
   response.redirect('/');
 }
 
+// if adding new APIs, insert functions here
 function showAllResults(request, response) {
   let sql = 'SELECT * FROM user_info;';
   client.query(sql)
     .then(results => {
       let answers = results.rows[0];
-      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers), getNewsResults(answers)];
+      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers), getNewsResults(answers)]; // function goes here
       Promise.all(promises)
         .then(result => {
           response.render('pages/result', { restaurantList: result[0], eventsList: result[1], triviaList: result[2], newsList: result[3], });
-        })
+        }) // key/value pairs in here
         .catch(err => console.log(err));
     })
     .catch(err => console.error(err));

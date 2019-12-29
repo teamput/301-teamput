@@ -1,3 +1,5 @@
+<% if (restaurantList) { %>
+<h1>Since you're hungry...</h1>
 <% restaurantList.forEach(restaurant => { %>
 <section>
   <img src="<%= restaurant.image_url %>" alt="<%= restaurant.name %>">
@@ -9,3 +11,6 @@
   <p><%= restaurant.distance %></p>
 </section>
 <% }) %>
+<% } else { %>
+<p>Sorry! We couldn't find you restaurants for this area.</p>
+<% } %>

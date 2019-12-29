@@ -1,3 +1,4 @@
+<% if (newsList) { %>
 <% newsList.forEach(article => { %>
 <section>
 
@@ -13,3 +14,6 @@
 
 </section>
 <% }) %>
+<% } else { %>
+<p>Sorry! We couldn't find you the news for this area.</p>
+<% } %>
