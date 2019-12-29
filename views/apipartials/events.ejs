@@ -1,3 +1,4 @@
+<% if (eventsList) { %>
 <% eventsList.forEach(event => { %>
 <section>
 
@@ -10,3 +11,6 @@
 
 </section>
 <% }) %>
+<% } else { %>
+<p>Sorry! We couldn't find you events for this area.</p>
+<% } %>

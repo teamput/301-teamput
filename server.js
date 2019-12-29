@@ -16,11 +16,12 @@ app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 app.use(express.urlencoded());
 
-
 // api JS
-// const getYelpResults = require('./lib/yelp/yelp');
-// const getEventsResults = require('./lib/events/getEventsResults');
 const getMusicResults = require('./lib/tunedive/tunedive');
+const getYelpResults = require('./lib/yelp/yelp');
+const getEventsResults = require('./lib/events/getEventsResults');
+const getTriviaResults = require('./lib/trivia/getTriviaResults');
+const getNewsResults = require('./lib/news/getNewsResults');
 
 // routes
 app.get('/', getHome);
@@ -37,16 +38,19 @@ function deleteDbInfo(request, response) {
   response.redirect('/');
 }
 
+// if adding new APIs, insert functions here
 function showAllResults(request, response) {
   let sql = 'SELECT * FROM user_info;';
   client.query(sql)
     .then(results => {
       let answers = results.rows[0];
-      let promises = [getMusicResults(answers)];
+
+      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers), getNewsResults(answers), getMusicResults(answers)]; // function goes here
       Promise.all(promises)
         .then(result => {
-          response.render('pages/result', { musicArray: result[0] });
-        })
+          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], triviaList: result[2], newsList: result[3], musicArray: result[4] });
+        }) // key/value pairs in here
+
         .catch(err => console.log(err));
     })
     .catch(err => console.error(err));
@@ -82,7 +86,6 @@ function getLocPutdb(request, response) {
       client.query(sql)
         .then(results => {
           if (results.rows.length > 0) {
-
             let sql = 'UPDATE user_info SET lat=$1, long=$2, location=$3, hunger=$4, interest=$5, music=$6 WHERE user_id IS NOT NULL;';
             let safeValues = [locationObject.lat, locationObject.lng, locationObject.location, hunger, interest, music];
             client.query(sql, safeValues);
@@ -94,7 +97,6 @@ function getLocPutdb(request, response) {
 
         })
         .catch(err => console.error(err));
-
       response.redirect('/result');
 
     })
