@@ -21,6 +21,7 @@ app.use(express.urlencoded());
 const getYelpResults = require('./lib/yelp/yelp');
 const getEventsResults = require('./lib/events/getEventsResults');
 const getTriviaResults = require('./lib/trivia/getTriviaResults');
+const getNewsResults = require('./lib/news/getNewsResults');
 
 // routes
 app.get('/', getHome);
@@ -42,10 +43,10 @@ function showAllResults(request, response) {
   client.query(sql)
     .then(results => {
       let answers = results.rows[0];
-      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers)];
+      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers), getNewsResults(answers)];
       Promise.all(promises)
         .then(result => {
-          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], triviaList: result[2], });
+          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], triviaList: result[2], newsList: result[3], });
         })
         .catch(err => console.log(err));
     })
