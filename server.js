@@ -18,8 +18,9 @@ app.use(express.urlencoded());
 
 
 // api JS
-const getYelpResults = require('./lib/yelp/yelp');
-const getEventsResults = require('./lib/events/getEventsResults');
+// const getYelpResults = require('./lib/yelp/yelp');
+// const getEventsResults = require('./lib/events/getEventsResults');
+const getMusicResults = require('./lib/tunedive/tunedive');
 
 // routes
 app.get('/', getHome);
@@ -41,10 +42,10 @@ function showAllResults(request, response) {
   client.query(sql)
     .then(results => {
       let answers = results.rows[0];
-      let promises = [getYelpResults(answers), getEventsResults(answers)];
+      let promises = [getMusicResults(answers)];
       Promise.all(promises)
         .then(result => {
-          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], });
+          response.render('pages/result', { musicArray: result[0] });
         })
         .catch(err => console.log(err));
     })
