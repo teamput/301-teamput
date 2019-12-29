@@ -17,6 +17,7 @@ app.use(express.static('./public'));
 app.use(express.urlencoded());
 
 // api JS
+const getMusicResults = require('./lib/tunedive/tunedive');
 const getYelpResults = require('./lib/yelp/yelp');
 const getEventsResults = require('./lib/events/getEventsResults');
 const getTriviaResults = require('./lib/trivia/getTriviaResults');
@@ -43,11 +44,13 @@ function showAllResults(request, response) {
   client.query(sql)
     .then(results => {
       let answers = results.rows[0];
-      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers), getNewsResults(answers)]; // function goes here
+
+      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers), getNewsResults(answers), getMusicResults(answers)]; // function goes here
       Promise.all(promises)
         .then(result => {
-          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], triviaList: result[2], newsList: result[3], });
+          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], triviaList: result[2], newsList: result[3], musicArray: result[4] });
         }) // key/value pairs in here
+
         .catch(err => console.log(err));
     })
     .catch(err => console.error(err));

@@ -1,0 +1,18 @@
+<% if(musicArray){ %>
+    <h1>We found some similar artists for you to check out!</h1>
+<% musicArray.forEach(artist => { %>
+
+<section>
+
+  <p><%= artist.name %></p>
+  <p><%= artist.teaser %></p>
+  <p><%= artist.wikilink %></p>
+  <p><%= artist.youtubeLink %></p>
+  <a href="<%= artist.youtubeLink %>">My Music</a>
+  <iframe width="320" height="240" src="<%= artist.youtubeLink %>" frameborder="0">
+  </iframe>
+</section>
+<% }) %>
+<% } else { %>
+<p>Sorry, we could't find your request!</p>
+<% } %>
