@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/public/styles/reset.css">
-    <link rel="stylesheet" href="/public/styles/base.css">
-    <link rel="stylesheet" href="/public/styles/layout.css">
-    <link rel="stylesheet" href="/public/styles/modules.css">
-    <link rel="stylesheet" href="/public/styles/state.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/state.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,25 +15,34 @@
 
 <body>
     <section id="hamburger">
-        <img src="../../public/images/190-menu.png">
+        <img src="/images/190-menu.png">
     </section>
+
     <header>
         <!-- this is hidden until hamburger menu is clicked -->
         <ul>
-            <a href="/aboutUs"> About the Devs</a>
+            <li><a href="/aboutUs"> About the Devs</a></li>
             <!-- add more options here -->
         </ul>
     </header>
+
     <div>
         <h1>i'm bored.</h1>
+        <h2>An app that gives you things to do when you don't know what to do.</h2>
     </div>
+
     <main>
         <div>
-            <a href="/quiz"> click here to activate fun.</a>
+            <a id="quiz-link" href="/quiz"> click here to activate fun</a>
+
+            <form action="<%= '/?_method=DELETE' %>" method="post">
+                <button type="submit">DELETE info from db</button>
+            </form>
         </div>
     </main>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/public/app.js"></script>
+    <script src="/app.js"></script>
 </body>
 
 </html>
