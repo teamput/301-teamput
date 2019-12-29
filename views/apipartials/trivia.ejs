@@ -1,0 +1,15 @@
+<% triviaList.forEach(question => { %>
+<section>
+
+  <p>Category: <%= question.category %></p>
+  <p>Question:<%= question.question %></p>
+  <p>- <%= question.correct_answer %></p>
+
+  <% question.incorrect_answers.forEach(answer => { %>
+
+  <p>- <%= answer %></p>
+
+  <% }) %>
+
+</section>
+<% }) %>

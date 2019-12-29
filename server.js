@@ -20,6 +20,7 @@ app.use(express.urlencoded());
 // api JS
 const getYelpResults = require('./lib/yelp/yelp');
 const getEventsResults = require('./lib/events/getEventsResults');
+const getTriviaResults = require('./lib/trivia/getTriviaResults');
 
 // routes
 app.get('/', getHome);
@@ -41,10 +42,10 @@ function showAllResults(request, response) {
   client.query(sql)
     .then(results => {
       let answers = results.rows[0];
-      let promises = [getYelpResults(answers), getEventsResults(answers)];
+      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers)];
       Promise.all(promises)
         .then(result => {
-          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], });
+          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], triviaList: result[2], });
         })
         .catch(err => console.log(err));
     })
@@ -81,7 +82,6 @@ function getLocPutdb(request, response) {
       client.query(sql)
         .then(results => {
           if (results.rows.length > 0) {
-
             let sql = 'UPDATE user_info SET lat=$1, long=$2, location=$3, hunger=$4, interest=$5, music=$6 WHERE user_id IS NOT NULL;';
             let safeValues = [locationObject.lat, locationObject.lng, locationObject.location, hunger, interest, music];
             client.query(sql, safeValues);
@@ -93,7 +93,6 @@ function getLocPutdb(request, response) {
 
         })
         .catch(err => console.error(err));
-
       response.redirect('/result');
 
     })
