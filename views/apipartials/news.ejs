@@ -2,18 +2,16 @@
 <% newsList.forEach(article => { %>
 <section>
 
-  <p>Abstract: <%= article.abstract %></p>
-  <!-- <img src="<%= article.image %>" alt="<%= article.abstract %>"> -->
-  <img src="<%=article.image %>">
-  <p><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></p>
-
   <p>Headline: <%= article.headline %></p>
+  <p>Abstract: <%= article.abstract %></p>
   <p>Publication Date: <%= article.date %></p>
+  <!-- <img src="<%=article.image %>"> -->
+  <p><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></p>
   <p>Byline: <%= article.byline %></p>
   <p>Source: <%= article.source %></p>
 
 </section>
 <% }) %>
 <% } else { %>
-<p>Sorry! We couldn't find you the news for this area.</p>
+<p>Sorry! We couldn't find you the current news.</p>
 <% } %>
