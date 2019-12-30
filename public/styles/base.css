@@ -1,6 +1,6 @@
 body {
+    box-sizing: border-box;
     max-width: 480px;
-    display: flex;
-    flex-wrap: wrap;
-    /* background-color: black; */
+    /* display: flex; */
+    font-family: 'Gothic A1', sans-serif;
 }
