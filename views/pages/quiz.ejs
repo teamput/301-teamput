@@ -5,57 +5,58 @@
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/quizLayout.css">
     <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/quizModules.css">
     <link rel="stylesheet" href="/styles/state.css">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Permanent+Marker&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>I'm Bored</title>
 </head>
 
-<h1>Let's find you something to do.</h1>
-<form id="details-form" action="<%= '/quiz?_method=PUT' %>" method='post'>
+<body>
 
-    <fieldset>
-        <h3>Where do you live?</h3>
-        <input id="locationInput" type="text" name="location" placeholder="last location" required>
-    </fieldset>
+    <header>
+        <section id="hamburger">
+            <img src="/images/190-menu.png">
+        </section>
 
-    <fieldset>
-        <h3> Are you feeling hungry?</h3>
-        <label for="yes">Yes
-            <input type="radio" name="hunger" value="yes" required>
-        </label>
-        <label for="no">No
-            <input type="radio" name="hunger" value="no" required>
-        </label>
-    </fieldset>
+        <div id="menu">
+            <!-- this is hidden until hamburger menu is clicked -->
+            <ul>
+                <li><a href="/aboutUs"> About the Devs</a></li>
+                <li>
+                    <form action="<%= '/?_method=DELETE' %>" method="post">
+                        <button type="submit">DELETE info from db</button>
+                    </form>
+                </li>
+                <!-- add more options here -->
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1>Let's find you something to do.</h1>
+        <form id="details-form" action="<%= '/quiz?_method=PUT' %>" method='post'>
 
-    <fieldset>
-        <h3>Choose your top interest from this list.</h3>
-        <label for="concerts">Concerts
-            <input type="radio" name="interest" value="concert" required>
-        </label>
-        <label for="festivals">Festivals
-            <input type="radio" name="interest" value="festivals" required>
-        </label>
-        <label for="comedy">Comedy
-            <input type="radio" name="interest" value="comedy" required>
-        </label>
-        <label for="family">Family
-            <input type="radio" name="interest" value="family" required>
-        </label>
-        <label for="nightlife">Nightlife
-            <input type="radio" name="interest" value="nightlife" required>
-        </label>
-        <label for="performing arts">Performing Arts
-            <input type="radio" name="interest" value="performing arts" required>
-        </label>
-        <label for="sports">Sports
-            <input type="radio" name="interest" value="sports" required>
-        </label>
-    </fieldset>
+            <fieldset>
+                <hr>
+                <h3>Where do you live?</h3>
+                <input id="locationInput" type="text" name="location" placeholder="last location" required>
+            </fieldset>
 
+            <fieldset>
+                <hr>
+                <h3> Are you feeling hungry?</h3>
+                <label for="yes">Yes
+                    <input type="radio" name="hunger" value="yes" required>
+                </label>
+                <label for="no">No
+                    <input type="radio" name="hunger" value="no" required>
+                </label>
+            </fieldset>
     <fieldset>
         <h3>Type in your favorite artist here:</h3>
         <input type="text" name="music" placeholder="musician">
@@ -88,6 +89,43 @@
 
     <button type="submit">Unbore Me</button>
 
-</form>
+           <fieldset>
+                <hr>
+                <h3>Choose your top interest from this list.</h3>
+                <label for="concerts">Concerts
+                    <input type="radio" name="interest" value="concert" required>
+                </label>
+                <label for="festivals">Festivals
+                    <input type="radio" name="interest" value="festivals" required>
+                </label>
+                <label for="comedy">Comedy
+                    <input type="radio" name="interest" value="comedy" required>
+                </label>
+                <label for="family">Family
+                    <input type="radio" name="interest" value="family" required>
+                </label>
+                <label for="nightlife">Nightlife
+                    <input type="radio" name="interest" value="nightlife" required>
+                </label>
+                <label for="performing arts">Performing Arts
+                    <input type="radio" name="interest" value="performing arts" required>
+                </label>
+                <label for="sports">Sports
+                    <input type="radio" name="interest" value="sports" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <hr>
+                <h3>Type in your favorite artist here:</h3>
+                <input id="musicInput" type="text" name="music" placeholder="musician">
+            </fieldset>
+            <button type="submit">Un-bore Me</button>
+
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/app.js"></script>
+</body>
 
 </html>
