@@ -7,10 +7,15 @@
   <p><%= artist.name %></p>
   <p><%= artist.teaser %></p>
   <p><%= artist.wikilink %></p>
-  <p><%= artist.youtubeLink %></p>
-  <a href="<%= artist.youtubeLink %>">My Music</a>
   <iframe width="320" height="240" src="<%= artist.youtubeLink %>" frameborder="0">
   </iframe>
+  <form action="result/music" method="post">
+    <input type="hidden" name="name" value="<%= artist.name %>">
+    <input type="hidden" name="teaser" value="<%= artist.teaser %>">
+    <input type="hidden" name="wikilink" value="<%= artist.wikilink %>">
+    <input type="hidden" name="youtubeLink" value="<%= artist.youtubeLink %>">
+    <button type="submit">Save This Artist</button>
+  </form>
 </section>
 <% }) %>
 <% } else { %>

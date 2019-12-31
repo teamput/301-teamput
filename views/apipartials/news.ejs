@@ -9,6 +9,16 @@
   <p><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></p>
   <p>Byline: <%= article.byline %></p>
   <p>Source: <%= article.source %></p>
+  <form action="/result/news" method="post">
+    <input type="hidden" name="headline" value="<%= article.headline %>">
+    <input type="hidden" name="abstract" value="<%= article.abstract %>">
+    <input type="hidden" name="web_url" value="<%= article.web_url %>">
+    <input type="hidden" name="date" value="<%= article.date %>">
+    <input type="hidden" name="byline" value="<%= article.byline %>">
+    <input type="hidden" name="image" value="<%= article.image %>">
+    <input type="hidden" name="source" value="<%= article.source %>">
+    <button type="submit">Add to Favorite News Stories</button>
+  </form>
 
 </section>
 <% }) %>
