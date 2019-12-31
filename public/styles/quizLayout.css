@@ -10,7 +10,7 @@ main form{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    height: 700px;
+    height: 1000px;
     
 }
 h3 {
@@ -70,6 +70,7 @@ header{
 }
 input[type="radio"]:checked + label {
     background-color: #D776A2 ;
+    
 }
 
 form label {

@@ -1,0 +1,66 @@
+#music-section {
+    width: 480 px;
+    height: fit-content;
+    
+}
+#music-section p{
+    font-size: 12px;
+    width: 290px;
+    height: 150px;
+    overflow: auto;
+    
+}
+#music-section section{
+    width: 480px;
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+
+}
+#music-section section div {
+    flex-direction: column;
+}
+#food-section section{
+    width:480px;
+    height:150px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; 
+    border: solid black 5px;
+    background-color: lightblue;
+}
+#food-section section div {
+    width:290px;
+    height:150px;
+    display: flex;
+    flex-direction: row;
+}
+
+#event-section section div{
+background-color: lightblue;
+
+}
+#event-section section {
+   width:480px;
+    height:250px;
+
+    }
+    #event-section section p{
+        overflow: auto;
+        padding-top:20px;
+    }
+    h1{
+        font-size:25px;
+        font-family: 'Permanent Marker', cursive;
+    }
+    #news-section section{
+        flex-direction:row ;
+        width:480px;
+        height: 250px;
+        background-color: red;
+    }
+    #news-section section div{
+        background-color: lightblue;
+        
+
+    }
