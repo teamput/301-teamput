@@ -8,7 +8,6 @@ const app = express();
 require('ejs');
 require('dotenv').config();
 const methodOverride = require('method-override');
-const superagent = require('superagent');
 app.use(methodOverride('_method'));
 const PORT = process.env.PORT || 3001;
 app.set('view engine', 'ejs');
@@ -25,13 +24,9 @@ app.use(express.urlencoded());
 const client = require('./lib/client');
 const getLocPutdb = require('./lib/getlocputdb');
 const savetoFavorites = require('./lib/savetofavorites');
-
-// api JS
-const getMusicResults = require('./lib/tunedive/tunedive');
-const getYelpResults = require('./lib/yelp/yelp');
-const getEventsResults = require('./lib/events/getEventsResults');
-const getTriviaResults = require('./lib/trivia/getTriviaResults');
-const getNewsResults = require('./lib/news/getNewsResults');
+const displayFavorites = require('./lib/displayFavorites');
+const showAllResults = require('./lib/showAllResults');
+const deleteDbInfo = require('./lib/deleteDbInfo');
 
 // routes
 app.get('/', getHome);
@@ -42,29 +37,7 @@ app.put('/quiz', getLocPutdb);
 app.delete('/result', deleteDbInfo);
 app.delete('/', deleteDbInfo);
 app.post('/result/:apiTableName', savetoFavorites);
-
-function deleteDbInfo(request, response) {
-  let sql = 'DELETE FROM user_info;';
-  client.query(sql);
-  response.redirect('/');
-}
-
-// if adding new APIs, insert functions/promises here
-function showAllResults(request, response) {
-  let sql = 'SELECT * FROM user_info;';
-  client.query(sql)
-    .then(results => {
-      let answers = results.rows[0];
-
-      let promises = [getYelpResults(answers), getEventsResults(answers), getTriviaResults(answers), getNewsResults(answers), getMusicResults(answers)]; // function goes here
-      Promise.all(promises)
-        .then(result => {
-          response.render('pages/result', { restaurantList: result[0], eventsList: result[1], triviaList: result[2], newsList: result[3], musicArray: result[4], });
-        }) // key/value pairs in here
-        .catch(err => console.log(err));
-    })
-    .catch(err => console.error(err));
-}
+app.get('/favorites', displayFavorites);
 
 function getHome(request, response) {
   response.render('pages/index');

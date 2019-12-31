@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Results</title>
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/resultLayout.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/resultModules.css">
+  <link rel="stylesheet" href="/styles/state.css">
+  <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Your Favorite Stuff:</h1>
+  <div id="food-section">
+    <%- include('../apipartials/yelp') %>
+  </div>
+  <hr>
+  <div id="music-section">
+    <%- include('../apipartials/music') %>
+  </div>
+  <hr>
+  <div id="event-section">
+    <%- include('../apipartials/events') %>
+  </div>
+  <hr>
+  <div id="news-section">
+    <%- include('../apipartials/news') %>
+  </div>
+  <hr>
+
+</body>
+
+</html>

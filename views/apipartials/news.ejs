@@ -1,25 +1,38 @@
 <% if (newsList) { %>
 <% newsList.forEach(article => { %>
-  <section>
-    <h2>HEADLINE: <%= article.headline %></h2>
-<div>
-  <p>Publication Date: <%= article.date %></p>
-  <p>Abstract: <%= article.abstract %></p>
-  <p><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></p>
-  <p>Byline: <%= article.byline %></p>
-  <img src="<%=article.image %>">
-  <p>Source: <%= article.source %></p>
-  <form action="/result/news" method="post">
-    <input type="hidden" name="headline" value="<%= article.headline %>">
-    <input type="hidden" name="abstract" value="<%= article.abstract %>">
-    <input type="hidden" name="web_url" value="<%= article.web_url %>">
-    <input type="hidden" name="date" value="<%= article.date %>">
-    <input type="hidden" name="byline" value="<%= article.byline %>">
-    <input type="hidden" name="image" value="<%= article.image %>">
-    <input type="hidden" name="source" value="<%= article.source %>">
-    <button type="submit">Add to Favorite News Stories</button>
-  </form>
-</div>
+<h1>News of the Day</h1>
+<section>
+  <h2>HEADLINE: <%= article.headline %></h2>
+  <div>
+    <p>Publication Date: <%= article.date %></p>
+    <p>Abstract: <%= article.abstract %></p>
+    <p><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></p>
+    <p>Byline: <%= article.byline %></p>
+    <img src="<%=article.image %>">
+    <p>Source: <%= article.source %></p>
+    <% if (displayFavs) { %>
+    <form action="/result/news" method="post">
+      <input type="hidden" name="headline" value="<%= article.headline %>">
+      <input type="hidden" name="abstract" value="<%= article.abstract %>">
+      <input type="hidden" name="web_url" value="<%= article.web_url %>">
+      <input type="hidden" name="date" value="<%= article.date %>">
+      <input type="hidden" name="byline" value="<%= article.byline %>">
+      <input type="hidden" name="image" value="<%= article.image %>">
+      <input type="hidden" name="source" value="<%= article.source %>">
+      <button type="submit">Delete from Favorites</button>
+      <% } else { %>
+      <form action="/result/news" method="post">
+        <input type="hidden" name="headline" value="<%= article.headline %>">
+        <input type="hidden" name="abstract" value="<%= article.abstract %>">
+        <input type="hidden" name="web_url" value="<%= article.web_url %>">
+        <input type="hidden" name="date" value="<%= article.date %>">
+        <input type="hidden" name="byline" value="<%= article.byline %>">
+        <input type="hidden" name="image" value="<%= article.image %>">
+        <input type="hidden" name="source" value="<%= article.source %>">
+        <button type="submit">Add to Favorite News Stories</button>
+        <% } %>
+      </form>
+  </div>
 
 </section>
 <% }) %>
