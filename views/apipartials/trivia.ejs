@@ -2,8 +2,8 @@
 <h1>Train your brain - no pain, no gain.</h1>
 <% triviaList.forEach(question => { %>
 <section>
-
-  <p>Category: <%= question.category %></p>
+<div>
+  <h2>Category: <%= question.category %></h2>
   <p>Question:<%= question.question %></p>
   <p>- <%= question.correct_answer %></p>
 
@@ -12,7 +12,7 @@
   <p>- <%= answer %></p>
 
   <% }) %>
-
+  </div>
 </section>
 <% }) %>
 <% } else { %>
