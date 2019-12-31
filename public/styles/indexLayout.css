@@ -19,9 +19,9 @@ main {
     margin-top: 80px;
     /* border: 2px black solid; */
     height: 600px;
-    background-image: url(../images/bored.jpg);
+    background-image: url(../images/bored.png);
     background-size:480px;
-    background-color: rgb(212, 215, 233);
+    background-color: rgb(212, 217, 245);
     background-repeat: no-repeat;
     background-position: bottom;
     display: flex;
