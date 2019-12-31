@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS user_info(
   location VARCHAR(255),
   hunger VARCHAR,
   interest VARCHAR(255),
-  music VARCHAR(255)
+  music VARCHAR(255),
+  trivia VARCHAR(255)
 );
-INSERT INTO user_info (lat, long, location, hunger, interest, music) VALUES (12.123123123, 12.1234242, 'seattle', 'yes', 'sports', 'the beatles');
+INSERT INTO user_info (lat, long, location, hunger, interest, music, trivia) VALUES (12.123123123, 12.1234242, 'seattle', 'yes', 'sports', 'the beatles', 'animals');
