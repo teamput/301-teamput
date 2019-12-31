@@ -26,7 +26,8 @@ const getLocPutdb = require('./lib/getlocputdb');
 const savetoFavorites = require('./lib/savetofavorites');
 const displayFavorites = require('./lib/displayFavorites');
 const showAllResults = require('./lib/showAllResults');
-const deleteDbInfo = require('./lib/deleteDbInfo');
+const deletefromFavorites = require('./lib/deletefromFavorites');
+// const deleteDbInfo = require('./lib/deleteDbInfo');
 
 // routes
 app.get('/', getHome);
@@ -34,8 +35,8 @@ app.get('/result', showAllResults);
 app.get('/aboutUs', aboutUs);
 app.get('/quiz', displayQuiz);
 app.put('/quiz', getLocPutdb);
-app.delete('/result', deleteDbInfo);
-app.delete('/', deleteDbInfo);
+app.delete('/favorites/:apiTableName', deletefromFavorites);
+// app.delete('/', deleteDbInfo);
 app.post('/result/:apiTableName', savetoFavorites);
 app.get('/favorites', displayFavorites);
 

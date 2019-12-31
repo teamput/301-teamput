@@ -12,7 +12,7 @@
 
   <a href="<%= event.url %>">More Info</a>
   <% if (displayFavs) { %>
-  <form action="/result/events" method="post">
+  <form action="<%= '/favorites/events?_method=DELETE' %>" method="post">
     <input type="hidden" name="url" value="<%= event.url %>">
     <input type="hidden" name="title" value="<%= event.title %>">
     <input type="hidden" name="venue_name" value="<%= event.venue_name %>">
