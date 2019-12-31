@@ -15,6 +15,7 @@
     height: 280px;
     display: flex;
     flex-direction: row;
+    border: solid black 5px;
 
 }
 #music-section section div {
@@ -22,7 +23,7 @@
 }
 #food-section section{
     width:480px;
-    height:150px;
+    height:250px;
     overflow: hidden;
     display: flex;
     flex-direction: row; 
@@ -42,11 +43,15 @@ background-color: lightblue;
 }
 #event-section section {
    width:480px;
-    height:250px;
+    /* height:360px; */
+    border: solid black 5px;
 
     }
-    #event-section section p{
-        overflow: auto;
+    #event-section{
+        height: fit-content;
+    }
+    #event-section p{
+        overflow: hidden;
         padding-top:20px;
     }
     h1{
@@ -56,11 +61,14 @@ background-color: lightblue;
     #news-section section{
         flex-direction:row ;
         width:480px;
-        height: 250px;
+        height: 275px;
         background-color: red;
+        border: solid black 5px;
     }
     #news-section section div{
         background-color: lightblue;
         
-
+    }
+    #trivia-section section{
+        border:solid black 5px;
     }

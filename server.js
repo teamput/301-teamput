@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+/* eslint-disable no-case-declarations */
 'use strict';
 
 // server set up
@@ -13,9 +15,16 @@ app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 app.use(express.urlencoded());
 
+// app.get('/resultexists', deliverResults);
+
+// let deliverResults = (request, response) {
+
+// }
+
 // function JS
 const client = require('./lib/client');
 const getLocPutdb = require('./lib/getlocputdb');
+const savetoFavorites = require('./lib/savetofavorites');
 
 // api JS
 const getMusicResults = require('./lib/tunedive/tunedive');
@@ -32,6 +41,7 @@ app.get('/quiz', displayQuiz);
 app.put('/quiz', getLocPutdb);
 app.delete('/result', deleteDbInfo);
 app.delete('/', deleteDbInfo);
+app.post('/result/:apiTableName', savetoFavorites);
 
 function deleteDbInfo(request, response) {
   let sql = 'DELETE FROM user_info;';
@@ -69,7 +79,7 @@ function displayQuiz(request, response) {
 }
 
 app.use('*', (request, response) => {
-  response.status(404).send('pages/error.ejs');
+  response.status(404).render('pages/error.ejs');
 });
 client.connect(() => {
   app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

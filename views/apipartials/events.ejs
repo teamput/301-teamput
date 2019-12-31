@@ -10,6 +10,20 @@
   <p><%- event.description %></p>
   
   <a href="<%= event.url %>">More Info</a>
+  <p><%= event.title %></p>
+  <p><%= event.venue_name %></p>
+  <p><%= event.city_name %></p>
+  <p><%= event.start_time %></p>
+  <p><%= event.description %></p>
+  <form action="/result/events" method="post">
+    <input type="hidden" name="url" value="<%= event.url %>">
+    <input type="hidden" name="title" value="<%= event.title %>">
+    <input type="hidden" name="venue_name" value="<%= event.venue_name %>">
+    <input type="hidden" name="city_name" value="<%= event.city_name %>">
+    <input type="hidden" name="start_time" value="<%= event.start_time %>">
+    <input type="hidden" name="description" value="<%= event.description %>">
+    <button type="submit">Add to Favorite Events</button>
+  </form>
 </section>
 <% }) %>
 <% } else { %>
