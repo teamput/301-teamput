@@ -41,6 +41,7 @@ mobileClick();
 //     }
 //     ev.target.previousElementSibling.checked = true;
 // }
+
 function radioButtons(){
     //on clicking a radio button
     $('label').click(function() {
@@ -49,3 +50,4 @@ function radioButtons(){
     })
 }
 radioButtons();
+
