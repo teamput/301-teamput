@@ -6,17 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Results</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/resultLayout.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/resultModules.css">
+    <link rel="stylesheet" href="/styles/state.css">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>Lets cure that boredom!</h1>
-    <%- include('../apipartials/music') %>
-    <%- include('../apipartials/news') %>
-    <%- include('../apipartials/trivia') %>
+    <div id="food-section">
     <%- include('../apipartials/yelp') %>
+    </div>
+    <hr>
+    <div id="music-section">
+        <h1>Here are some similar artists for you to check out!</h1>
+        <%- include('../apipartials/music') %>
+    </div>
+    <hr>
+    <div id="event-section">
+        <h1>The Hip-Haps in your area!</h1>
     <%- include('../apipartials/events') %>
-
-
+    </div>
+    <hr>
+    <div id="news-section">
+    <%- include('../apipartials/news') %>
+    </div>
+    <hr>
+    <div>
+    <%- include('../apipartials/trivia') %>
+    </div>
+    <hr>
 
 </body>
 

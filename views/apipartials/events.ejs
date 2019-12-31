@@ -1,15 +1,15 @@
 <% if (eventsList) { %>
-<h1>Events to go to:</h1>
 <% eventsList.forEach(event => { %>
 <section>
 
+  <div>
+    <h2><%= event.title %></h2>
+    <h4><%= event.venue_name   %></h4>
+    <h4><%= event.start_time %></h4>
+  </div>
+  <p><%- event.description %></p>
+  
   <a href="<%= event.url %>">More Info</a>
-  <p><%= event.title %></p>
-  <p><%= event.venue_name %></p>
-  <p><%= event.city_name %></p>
-  <p><%= event.start_time %></p>
-  <p><%= event.description %></p>
-
 </section>
 <% }) %>
 <% } else { %>
