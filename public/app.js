@@ -22,11 +22,11 @@ mobileClick();
 //     }
 //     ev.target.previousElementSibling.checked = true;
 // }
-function radioButtons(){
-    //on clicking a radio button
-    $('label').click(function() {
-        //set that labels input to checked
-        console.log('got it');
-    })
-}
-radioButtons();
+// function radioButtons(){
+//     //on clicking a radio button
+//     $('label').click(function() {
+//         //set that labels input to checked
+//         console.log('got it');
+//     })
+// }
+// radioButtons();
