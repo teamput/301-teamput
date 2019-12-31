@@ -9,6 +9,16 @@
     <p><%= restaurant.rating %></p>
     <p><%= restaurant.price %></p>
     <p><%= restaurant.phone %></p>
+    <form action="result/yelp" method="post">
+    <input type="hidden" name="id" value="<%= restaurant.id %>">
+    <input type="hidden" name="name" value="<%= restaurant.name %>">
+    <input type="hidden" name="image_url" value="<%= restaurant.image_url %>">
+    <input type="hidden" name="is_closed" value="<%= restaurant.is_closed %>">
+    <input type="hidden" name="rating" value="<%= restaurant.rating %>">
+    <input type="hidden" name="price" value="<%= restaurant.price %>">
+    <input type="hidden" name="distance" value="<%= restaurant.distance %>">
+    <button type="submit">Add to Favorite Restaurants</button>
+  </form>
   </div>
 </section>
 <% }) %>
