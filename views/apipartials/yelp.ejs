@@ -10,7 +10,7 @@
     <p><%= restaurant.price %></p>
     <p><%= restaurant.phone %></p>
     <% if (displayFavs) { %>
-    <form action="result/yelp" method="post">
+    <form action="<%= '/favorites/yelp?_method=DELETE' %>" method="post">
       <input type="hidden" name="id" value="<%= restaurant.id %>">
       <input type="hidden" name="name" value="<%= restaurant.name %>">
       <input type="hidden" name="image_url" value="<%= restaurant.image_url %>">
