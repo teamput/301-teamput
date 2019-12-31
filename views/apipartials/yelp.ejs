@@ -2,14 +2,14 @@
 <h1>Since you're hungry...</h1>
 <% restaurantList.forEach(restaurant => { %>
 <section>
-  <img src="<%= restaurant.image_url %>" alt="<%= restaurant.name %>">
-  <p><%= restaurant.name %></p>
-  <p><%= restaurant.is_closed %></p>
-  <p><%= restaurant.rating %></p>
-  <p><%= restaurant.price %></p>
-  <p><%= restaurant.phone %></p>
-  <p><%= restaurant.distance %></p>
-  <form action="result/yelp" method="post">
+  <img width=200px src="<%= restaurant.image_url %>" alt="<%= restaurant.name %>">
+  <h2><%= restaurant.name %></h2>
+  <div>
+    <p><%= restaurant.is_closed %></p>
+    <p><%= restaurant.rating %></p>
+    <p><%= restaurant.price %></p>
+    <p><%= restaurant.phone %></p>
+    <form action="result/yelp" method="post">
     <input type="hidden" name="id" value="<%= restaurant.id %>">
     <input type="hidden" name="name" value="<%= restaurant.name %>">
     <input type="hidden" name="image_url" value="<%= restaurant.image_url %>">
@@ -19,6 +19,7 @@
     <input type="hidden" name="distance" value="<%= restaurant.distance %>">
     <button type="submit">Add to Favorite Restaurants</button>
   </form>
+  </div>
 </section>
 <% }) %>
 <% } else { %>

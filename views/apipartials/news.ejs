@@ -1,13 +1,13 @@
 <% if (newsList) { %>
 <% newsList.forEach(article => { %>
-<section>
-
-  <p>Headline: <%= article.headline %></p>
-  <p>Abstract: <%= article.abstract %></p>
+  <section>
+    <h2>HEADLINE: <%= article.headline %></h2>
+<div>
   <p>Publication Date: <%= article.date %></p>
-  <img src="<%=article.image %>">
+  <p>Abstract: <%= article.abstract %></p>
   <p><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></p>
   <p>Byline: <%= article.byline %></p>
+  <img src="<%=article.image %>">
   <p>Source: <%= article.source %></p>
   <form action="/result/news" method="post">
     <input type="hidden" name="headline" value="<%= article.headline %>">
@@ -19,6 +19,7 @@
     <input type="hidden" name="source" value="<%= article.source %>">
     <button type="submit">Add to Favorite News Stories</button>
   </form>
+</div>
 
 </section>
 <% }) %>

@@ -1,13 +1,12 @@
 <% if(musicArray){ %>
-<h1>We found some similar artists for you to check out!</h1>
 <% musicArray.forEach(artist => { %>
 
 <section>
-
-  <p><%= artist.name %></p>
-  <p><%= artist.teaser %></p>
-  <p><%= artist.wikilink %></p>
-  <iframe width="320" height="240" src="<%= artist.youtubeLink %>" frameborder="0">
+  <div>
+  <h2><%= artist.name %></h2>
+  <p><%= artist.teaser +" " + artist.wikilink  %></p>
+  <a href="<%= artist.youtubeLink %>">Youtube Channel for this artist</a>
+  <iframe width="200" height="150" src="<%= artist.youtubeLink %>" frameborder="0">
   </iframe>
   <form action="result/music" method="post">
     <input type="hidden" name="name" value="<%= artist.name %>">
@@ -16,6 +15,7 @@
     <input type="hidden" name="youtubeLink" value="<%= artist.youtubeLink %>">
     <button type="submit">Save This Artist</button>
   </form>
+  </div>
 </section>
 <% }) %>
 <% } else { %>
