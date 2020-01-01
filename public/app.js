@@ -10,7 +10,7 @@ $(function mobileClick() {
     $('#menu').slideToggle();
   });
 })
-mobileClick();
+// mobileClick();
 
 $.ajax({
   type: 'POST',
@@ -40,3 +40,20 @@ function radioButtons() {
 }
 radioButtons();
 
+function foodOptions(){
+  //hide all food but one
+  let currentFood = 1
+  $('#food-section section').toggle();
+  $(`#food-section section:nth-of-type(${currentFood})`).toggle();
+  
+  //on click 
+  $('.seeNextFood').on('click', () => {
+    // $(`#food-section section:nth-of-type(${currerntFood})`).slideDown();
+    currentFood += 1;
+    $(`#food-section section:nth-of-type(${currentFood})`).slideDown();
+  })
+  
+    //=> hide this food 
+    //show next food
+}
+foodOptions();
