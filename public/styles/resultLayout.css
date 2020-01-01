@@ -55,11 +55,18 @@ h2 {
     font-size:19px;
     background-color: rgb(147, 180, 80);
     font-family: 'Bree Serif', serif;
+    text-align: center;
 }
 p {
     padding-top: 5px;
 }
-
+button {
+    width: 130px;
+    height: 35px;
+    font-family: 'Bree Serif', serif;
+    font-size: 10px;
+    margin-top: 10px;
+}
 
 
 
