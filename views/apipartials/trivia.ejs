@@ -1,0 +1,20 @@
+<% if (triviaList) { %>
+<h1>Train your brain - no pain, no gain.</h1>
+<% triviaList.forEach(question => { %>
+<section>
+<div>
+  <h2>Category: <%= question.category %></h2>
+  <p>Question:<%= question.question %></p>
+  <p>- <%= question.correct_answer %></p>
+
+  <% question.incorrect_answers.forEach(answer => { %>
+
+  <p>- <%= answer %></p>
+
+  <% }) %>
+  </div>
+</section>
+<% }) %>
+<% } else { %>
+<p>Sorry! We couldn't find you any fun trivia.</p>
+<% } %>
