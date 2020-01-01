@@ -32,13 +32,13 @@ fieldset {
 main {
     color: rgb(58, 9, 31) ;
     margin-top: 75px;
-    background-color: rgb(230, 197, 212);
+    background-color: rgb(245, 245, 245);
 }
 body {
-    background-color: rgb(230, 197, 212);
+    background-color: rgb(245, 245, 245);
 }
 #hamburger{
-    background-color: #A12A60;
+    background-color: rgb(245, 245, 245);
     border: solid 1px  #7E1344 ;
     border-radius: 10px;
     

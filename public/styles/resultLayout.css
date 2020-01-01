@@ -1,12 +1,75 @@
-#music-section {
-    width: 480 px;
-    height: fit-content;
+main {
+    margin-top: 100px;
+    /* background-color: rgb(245, 245, 245); */
+    color: rgb(83, 114, 21);
+    overflow: hidden;
+    
     
 }
+#hamburger{
+    background-color:  rgb(83, 114, 21);
+    border: solid 1px #74A316;
+    border-radius: 10px;
+    
+}
+#hamburger:hover {
+    background-color: rgb(127, 161, 59);
+}
+#menu{
+    background-color: #B1E052 ;
+    border: solid 1px #74A316;
+    
+}
+main > div {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+hr {
+    border: #74A316 solid 3px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+h1{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size:25px;
+    background-color: #B1E052;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+}
+main > h1:first-of-type{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 45px;
+    border-top: #1e2411 .5px solid;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+a{
+    text-decoration: none;
+    color: #435029;
+}
+h2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size:19px;
+    background-color: rgb(147, 180, 80);
+    font-family: 'Bree Serif', serif;
+}
+p {
+    padding-top: 5px;
+}
+
+
+
+
+/* music */
+
 #music-section p{
     font-size: 12px;
     width: 290px;
-    height: 150px;
+    height: 240px;
+    line-height: 14px;
     overflow: auto;
     
 }
@@ -15,60 +78,132 @@
     height: 280px;
     display: flex;
     flex-direction: row;
-    border: solid black 5px;
-
+    border-top: solid black .2px;
+    border-bottom: solid black .2px;
+    background-color: rgb(252, 251, 250);
+    
 }
-#music-section section div {
+#music-section section button {
+    background-color: #ccdab0;
+    border-radius: 8px;
+    border-style: none;
+    border-top: .5px black solid;
+    color: #435029;
+    }
+#music-section section button:hover {
+    background-color: #b8d877;
+    color: #555555;
+}
+
+/* food */
+
+#food-section img {
+    width: 350px;
+}
+#food-section img:hover {
+    border: #b1e052 3px solid; 
+    margin: -3px;
+    
+}
+#foodData {
+    
     flex-direction: column;
+    justify-content: space-around;
+}
+#foodData li {
+    margin-top: 30px;
 }
 #food-section section{
+    background-color: rgb(252, 251, 250);
     width:480px;
-    height:250px;
+    height:fit-content;
     overflow: hidden;
     display: flex;
     flex-direction: row; 
-    border: solid black 5px;
-    background-color: lightblue;
+    border-top: solid black .2px;
+    border-bottom: solid black .2px;
 }
-#food-section section div {
+#food-section section button {
+background-color: #ccdab0;
+border-radius: 8px;
+border-style: none;
+border-top: .5px black solid;
+color: #435029;
+}
+#food-section section button:hover {
+    background-color: #b8d877;
+    color: #555555;
+}
+/* #food-section section div {
     width:290px;
     height:150px;
     display: flex;
     flex-direction: row;
-}
+} */
+
+/* event */
 
 #event-section section div{
-background-color: lightblue;
-
+    /* background-color: #B1E052; */
+    font-size: 20px;
+    
 }
 #event-section section {
-   width:480px;
+    background-color: rgb(252, 251, 250);
+    width:480px;
     /* height:360px; */
-    border: solid black 5px;
-
+    border-top: solid black .2px;
+    border-bottom: solid black .2px;
+    
+}
+#event-section{
+    height: fit-content;
+}
+#event-section p{
+    overflow: hidden;
+    padding-top:20px;
+    line-height: 18px;
+}
+#event-section section button {
+    background-color: #ccdab0;
+    border-radius: 8px;
+    border-style: none;
+    border-top: .5px black solid;
+    color: #435029;
+}
+    #event-section section button:hover {
+    background-color: #b8d877;
+    color: #555555;
+}
+#event-section span {
+    flex-direction: row;
+    width: 400px;
+}
+#news-section section{
+    background-color: rgb(252, 251, 250);
+    flex-direction:row ;
+    width:480px;
+    height: 275px;
+    /* background-color: red; */
+    padding: 3px;
+    border-top: solid black .2px;
+    border-bottom: solid black .2px;
+}
+#news-section section div{
+    /* background-color: #B1E052; */
+    
+}
+#news-section section button {
+    background-color: #ccdab0;
+    border-radius: 8px;
+    border-style: none;
+    border-top: .5px black solid;
+    color: #435029;
     }
-    #event-section{
-        height: fit-content;
-    }
-    #event-section p{
-        overflow: hidden;
-        padding-top:20px;
-    }
-    h1{
-        font-size:25px;
-        font-family: 'Permanent Marker', cursive;
-    }
-    #news-section section{
-        flex-direction:row ;
-        width:480px;
-        height: 275px;
-        background-color: red;
-        border: solid black 5px;
-    }
-    #news-section section div{
-        background-color: lightblue;
-        
-    }
-    #trivia-section section{
-        border:solid black 5px;
-    }
+#news-section section button:hover {
+    background-color: #b8d877;
+    color: #555555;
+}
+#trivia-section section{
+    /* border:solid black 5px; */
+}

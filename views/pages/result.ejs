@@ -12,33 +12,55 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/resultModules.css">
     <link rel="stylesheet" href="/styles/state.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Lets cure that boredom!</h1>
-    <div id="food-section">
-        <%- include('../apipartials/yelp') %>
-    </div>
-    <hr>
-    <div id="music-section">
-        <%- include('../apipartials/music') %>
-    </div>
-    <hr>
-    <div id="event-section">
-        <%- include('../apipartials/events') %>
-    </div>
-    <hr>
-    <div id="news-section">
-        <%- include('../apipartials/news') %>
-    </div>
-    <hr>
-    <div id="trivia-section">
-        <%- include('../apipartials/trivia') %>
-    </div>
-    <hr>
+    <header>
+        <section id="hamburger">
+            <img src="/images/190-menu.png">
+        </section>
 
+        <div id="menu">
+            <!-- this is hidden until hamburger menu is clicked -->
+            <ul>
+                <li><a href="/aboutUs"> About the Devs</a></li>
+                <li>
+                    <form action="<%= '/?_method=DELETE' %>" method="post">
+                        <button type="submit">DELETE info from db</button>
+                    </form>
+                </li>
+                <!-- add more options here -->
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1>Lets cure that boredom!</h1>
+        <div id="food-section">
+            <%- include('../apipartials/yelp') %>
+        </div>
+        <hr>
+        <div id="music-section">
+            <%- include('../apipartials/music') %>
+        </div>
+        <hr>
+        <div id="event-section">
+            <%- include('../apipartials/events') %>
+        </div>
+        <hr>
+        <div id="news-section">
+            <%- include('../apipartials/news') %>
+        </div>
+        <hr>
+        <div id="trivia-section">
+            <%- include('../apipartials/trivia') %>
+        </div>
+        <hr>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/app.js"></script>
 </body>
 
 </html>
