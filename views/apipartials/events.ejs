@@ -1,6 +1,6 @@
 <% if (eventsList) { %>
 <% eventsList.forEach(event => { %>
-<h1>Your Hip-Haps in your area!</h1>
+<h1>The Hip-Haps in your area!</h1>
 <section>
 
   <div>
@@ -9,8 +9,8 @@
     <h4><%= event.start_time %></h4>
   </div>
   <p><%- event.description %></p>
-
-  <a href="<%= event.url %>">More Info</a>
+<span>
+  <button><a href="<%= event.url %>">More Info</a></button>
   <% if (displayFavs) { %>
   <form action="<%= '/favorites/events?_method=DELETE' %>" method="post">
     <input type="hidden" name="url" value="<%= event.url %>">
@@ -32,6 +32,7 @@
     <button type="submit">Add to Favorite Events</button>
   </form>
   <% } %>
+</span>
 </section>
 <% }) %>
 <% } else { %>
