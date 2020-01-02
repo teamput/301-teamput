@@ -247,6 +247,31 @@ color: #435029;
     background-color: #b8d877;
     color: #555555;
 }
-#trivia-section section{
-    /* border:solid black 5px; */
+
+/* trivia */
+#trivia-section {
+    line-height: 1.2em;
+}
+
+.trivia-answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.trivia-answers p{
+    border: 1px solid rgb(147, 180, 80);
+    border-radius: 8px;    
+    width: 130px;
+    padding: 5px;
+    margin: 5px auto;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+}
+
+#trivia-section section div p {
+    text-align: center;
+    margin-bottom: 5px;
 }
