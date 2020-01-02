@@ -40,23 +40,67 @@ function radioButtons() {
 }
 radioButtons();
 
-function foodOptions() {
-  //hide all food but one
-  let currentFood = 1
+function foodOptions(){
+  
+  let currentFood = 1;
   $('#food-section section').toggle();
   $(`#food-section section:nth-of-type(${currentFood})`).toggle();
+  
 
-  //on click 
   $('.seeNextFood').on('click', () => {
-    // $(`#food-section section:nth-of-type(${currerntFood})`).slideDown();
     currentFood += 1;
     $(`#food-section section:nth-of-type(${currentFood})`).slideDown();
   })
-
-  //=> hide this food 
-  //show next food
+  
 }
 foodOptions();
+
+function musicOptions(){
+  
+  let currentmusic = 1;
+  $('#music-section section').toggle();
+  $(`#music-section section:nth-of-type(${currentmusic})`).toggle();
+  
+
+  $('.seeNextMusic').on('click', () => {
+    currentmusic += 1;
+    $(`#music-section section:nth-of-type(${currentmusic})`).slideDown();
+  })
+  
+}
+musicOptions();
+
+
+function eventOptions(){
+  
+  let currentevent = 1;
+  $('#event-section section').toggle();
+  $(`#event-section section:nth-of-type(${currentevent})`).toggle();
+  
+
+  $('.seeNextEvent').on('click', () => {
+    currentevent += 1;
+    $(`#event-section section:nth-of-type(${currentevent})`).slideDown();
+  })
+  
+}
+eventOptions();
+
+function newsOptions(){
+  
+  let currentnews = 1;
+  $('#news-section section').toggle();
+  $(`#news-section section:nth-of-type(${currentnews})`).toggle();
+  
+
+  $('.seeNextNews').on('click', () => {
+    currentnews += 1;
+    $(`#news-section section:nth-of-type(${currentnews})`).slideDown();
+  })
+  
+}
+newsOptions();
+
 
 // changing colors of selected trivia answers
 $('[data-correct=true]').click(function () {
@@ -65,3 +109,4 @@ $('[data-correct=true]').click(function () {
 $('[data-correct=false]').click(function () {
   $(this).toggleClass('incorrect');
 });
+
