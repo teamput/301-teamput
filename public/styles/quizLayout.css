@@ -5,7 +5,6 @@
 h1 {
     font-size: 30px;
     font-family: 'Permanent Marker', cursive;
-    margin-bottom: 30px;
     color: #7E1344;
     text-align: center;
 }
@@ -16,6 +15,7 @@ main div, main div form section fieldset {
 
 main div form section, #tastediveform {
   display: flex;
+  align-items: center;
 }
 
 main, #tastediveform article {
@@ -24,42 +24,62 @@ main, #tastediveform article {
   flex-direction: column;
 }
 
+#locationform fieldset {
+  padding-bottom: 30px;
+}
+
+form section {
+  margin: 20px;
+}
+
+form section button:nth-of-type(1) {
+  margin-left: 5px;
+}
+
 h3 {
+  font-family: 'Permanent Marker', cursive;
     display: flex;
     justify-content: center;
 }
+
 hr {
     border: #D776A2 solid 2px;
     border-radius: 2px;
 }
+
 fieldset {
     display: flex;
     flex-direction: row;
     font-size: 20px;
     width: 480px;
 }
+
 main {
     color: rgb(58, 9, 31) ;
     margin-top: 75px;
     background-color: rgb(245, 245, 245);
 }
+
 body {
     background-color: rgb(245, 245, 245);
 }
+
 #hamburger{
     background-color: rgb(245, 245, 245);
     border: solid 1px  #7E1344 ;
     border-radius: 10px;
     
 }
+
 #hamburger:hover {
     background-color: #D776A2;
 }
+
 #menu{
     background-color: #D776A2 ;
     border: solid 1px #7E1344;
-    
 }
+
 header{
     color: #7E1344 
 
@@ -70,9 +90,9 @@ header{
     width: 400px;
     font-size: 20px;
 }
+
 input[type="radio"]:checked + label {
     background-color: #D776A2 ;
-    
 }
 
 form label {
@@ -83,6 +103,7 @@ form label {
     background-color: #D776A2 ;
     border: orchid 1px solid;
     border-radius: 5px;
+    text-align: center;
 }
 
 form label:hover {
@@ -105,6 +126,10 @@ form label:hover {
     color: rgb(94, 26, 73);
 }
 
+main div form section button {
+  height: 200px;
+}
+
 #finalsubmit {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -118,6 +143,9 @@ form label:hover {
     font-family: 'Permanent Marker', cursive;
     color: rgb(94, 26, 73);
 }
+
 main button:hover, #finalsubmit:hover {
     background-color: rgb(231, 192, 210);
 }
+
+/* media query for form should go below */
