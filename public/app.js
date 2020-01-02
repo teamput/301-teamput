@@ -6,7 +6,7 @@ $(function mobileClick() {
   $('#hamburger').on('click', () => {
     //show or hide header with transition
     console.log('clicked');
- 
+
     $('#menu').slideToggle();
   });
 })
@@ -40,20 +40,28 @@ function radioButtons() {
 }
 radioButtons();
 
-function foodOptions(){
+function foodOptions() {
   //hide all food but one
   let currentFood = 1
   $('#food-section section').toggle();
   $(`#food-section section:nth-of-type(${currentFood})`).toggle();
-  
+
   //on click 
   $('.seeNextFood').on('click', () => {
     // $(`#food-section section:nth-of-type(${currerntFood})`).slideDown();
     currentFood += 1;
     $(`#food-section section:nth-of-type(${currentFood})`).slideDown();
   })
-  
-    //=> hide this food 
-    //show next food
+
+  //=> hide this food 
+  //show next food
 }
 foodOptions();
+
+// changing colors of selected trivia answers
+$('[data-correct=true]').click(function () {
+  $(this).toggleClass('correct');
+});
+$('[data-correct=false]').click(function () {
+  $(this).toggleClass('incorrect');
+});
