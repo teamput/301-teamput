@@ -1,5 +1,5 @@
 <% if (eventsList) { %>
-  <h1>The Hip-Haps in your area!</h1>
+<h1>The Hip-Haps in your area!</h1>
 <% eventsList.forEach(event => { %>
 <section>
 
@@ -9,31 +9,31 @@
     <h4><%= event.start_time %></h4>
   </div>
   <p><%- event.description %></p>
-<span>
-  <button><a href="<%= event.url %>">More Info</a></button>
-  <% if (displayFavs) { %>
-  <form action="<%= '/favorites/events?_method=DELETE' %>" method="post">
-    <input type="hidden" name="url" value="<%= event.url %>">
-    <input type="hidden" name="title" value="<%= event.title %>">
-    <input type="hidden" name="venue_name" value="<%= event.venue_name %>">
-    <input type="hidden" name="city_name" value="<%= event.city_name %>">
-    <input type="hidden" name="start_time" value="<%= event.start_time %>">
-    <input type="hidden" name="description" value="<%= event.description %>">
-    <button type="submit">Delete from Favorites</button>
-  </form>
-  <% } else { %>
-  <form action="/result/events" method="post">
-    <input type="hidden" name="url" value="<%= event.url %>">
-    <input type="hidden" name="title" value="<%= event.title %>">
-    <input type="hidden" name="venue_name" value="<%= event.venue_name %>">
-    <input type="hidden" name="city_name" value="<%= event.city_name %>">
-    <input type="hidden" name="start_time" value="<%= event.start_time %>">
-    <input type="hidden" name="description" value="<%= event.description %>">
-    <button type="submit">Add to Favorite Events</button>
-  </form>
-  <% } %>
-  <button class="seeNextEvent"> See more Events </button>
-</span>
+  <span>
+    <button><a href="<%= event.url %>">More Info</a></button>
+    <% if (displayFavs) { %>
+    <form action="<%= '/favorites/events?_method=DELETE' %>" method="post">
+      <input type="hidden" name="url" value="<%= event.url %>">
+      <input type="hidden" name="title" value="<%= event.title %>">
+      <input type="hidden" name="venue_name" value="<%= event.venue_name %>">
+      <input type="hidden" name="city_name" value="<%= event.city_name %>">
+      <input type="hidden" name="start_time" value="<%= event.start_time %>">
+      <input type="hidden" name="description" value="<%= event.description %>">
+      <button type="submit">Delete from Favorites</button>
+    </form>
+    <% } else { %>
+    <form action="/result/events" method="post">
+      <input type="hidden" name="url" value="<%= event.url %>">
+      <input type="hidden" name="title" value="<%= event.title %>">
+      <input type="hidden" name="venue_name" value="<%= event.venue_name %>">
+      <input type="hidden" name="city_name" value="<%= event.city_name %>">
+      <input type="hidden" name="start_time" value="<%= event.start_time %>">
+      <input type="hidden" name="description" value="<%= event.description %>">
+      <button class="add-to-fav" type="submit">Add to My Favorites</button>
+    </form>
+    <% } %>
+    <button class="seeNextEvent"> See more Events </button>
+  </span>
 </section>
 <% }) %>
 <% } else { %>
