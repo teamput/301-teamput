@@ -17,30 +17,30 @@
     </ul>
     <button><a href="<% restaurant.url %>"> View details </a></button>
     <% if (displayFavs) { %>
-      <form action="<%= '/favorites/yelp?_method=DELETE' %>" method="post">
-        <input type="hidden" name="id" value="<%= restaurant.id %>">
-        <input type="hidden" name="name" value="<%= restaurant.name %>">
-        <input type="hidden" name="image_url" value="<%= restaurant.image_url %>">
-        <input type="hidden" name="is_closed" value="<%= restaurant.is_closed %>">
-        <input type="hidden" name="rating" value="<%= restaurant.rating %>">
-        <input type="hidden" name="price" value="<%= restaurant.price %>">
-        <input type="hidden" name="distance" value="<%= restaurant.distance %>">
-        <button type="submit">Delete from Favorites</button>
-      </form>
-      <% } else { %>
-        <form action="result/yelp" method="post">
-          <input type="hidden" name="id" value="<%= restaurant.id %>">
-          <input type="hidden" name="name" value="<%= restaurant.name %>">
-          <input type="hidden" name="image_url" value="<%= restaurant.image_url %>">
-          <input type="hidden" name="is_closed" value="<%= restaurant.is_closed %>">
-          <input type="hidden" name="rating" value="<%= restaurant.rating %>">
-          <input type="hidden" name="price" value="<%= restaurant.price %>">
-          <input type="hidden" name="distance" value="<%= restaurant.distance %>">
-          <button type="submit">Add to Favorite Restaurants</button>
-        </form>
-        <% } %>
-        <button class="seeNextFood">See more food</button>
-      </div>
+    <form action="<%= '/favorites/yelp?_method=DELETE' %>" method="post">
+      <input type="hidden" name="id" value="<%= restaurant.id %>">
+      <input type="hidden" name="name" value="<%= restaurant.name %>">
+      <input type="hidden" name="image_url" value="<%= restaurant.image_url %>">
+      <input type="hidden" name="is_closed" value="<%= restaurant.is_closed %>">
+      <input type="hidden" name="rating" value="<%= restaurant.rating %>">
+      <input type="hidden" name="price" value="<%= restaurant.price %>">
+      <input type="hidden" name="distance" value="<%= restaurant.distance %>">
+      <button type="submit">Delete from Favorites</button>
+    </form>
+    <% } else { %>
+    <form action="result/yelp" method="post">
+      <input type="hidden" name="id" value="<%= restaurant.id %>">
+      <input type="hidden" name="name" value="<%= restaurant.name %>">
+      <input type="hidden" name="image_url" value="<%= restaurant.image_url %>">
+      <input type="hidden" name="is_closed" value="<%= restaurant.is_closed %>">
+      <input type="hidden" name="rating" value="<%= restaurant.rating %>">
+      <input type="hidden" name="price" value="<%= restaurant.price %>">
+      <input type="hidden" name="distance" value="<%= restaurant.distance %>">
+      <button class="add-to-fav" type="submit">Add to My Favorites</button>
+    </form>
+    <% } %>
+    <button class="seeNextFood">See more food</button>
+  </div>
 </section>
 <% }) %>
 <% } else { %>

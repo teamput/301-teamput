@@ -12,12 +12,12 @@ $(function mobileClick() {
 })
 // mobileClick();
 
-$.ajax({
-  type: 'POST',
-  dataType: 'json',
-}).then(results => {
-  console.log(results.body);
-})
+// $.ajax({
+//   type: 'POST',
+//   dataType: 'json',
+// }).then(results => {
+//   console.log(results.body);
+// })
 
 // $(main).click(
 //     alert('bla')
@@ -127,4 +127,12 @@ $(function shuffle() {
   $('[data-correct=false]').click(function () {
     $(this).toggleClass('incorrect');
   });
+});
+
+// changing button content to show added to favorites
+$('.add-to-fav').on('click', function () {
+  var favBtn = $(this);
+  if (favBtn.text('Add To My Favorites')) {
+    favBtn.text('Added To Favorites!');
+  }
 });

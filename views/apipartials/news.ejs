@@ -1,5 +1,5 @@
 <% if (newsList) { %>
-  <h1>News of the Day</h1>
+<h1>News of the Day</h1>
 <% newsList.forEach(article => { %>
 <section>
   <div>
@@ -9,7 +9,7 @@
     <p>Publication Date: <%= article.date %></p>
     <hr>
     <p>Byline: <%= article.byline %></p>
-    
+
   </div>
   <div>
     <img src="<%=article.image %>">
@@ -33,7 +33,7 @@
         <input type="hidden" name="byline" value="<%= article.byline %>">
         <input type="hidden" name="image" value="<%= article.image %>">
         <input type="hidden" name="source" value="<%= article.source %>">
-        <button type="submit">Add to Favorite News Stories</button>
+        <button class="add-to-fav" type="submit">Add to My Favorites</button>
         <% } %>
       </form>
       <button class="seeNextNews"> See more News Articles</button>
