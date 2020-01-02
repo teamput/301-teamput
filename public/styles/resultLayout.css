@@ -1,5 +1,5 @@
 main {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     /* background-color: rgb(245, 245, 245); */
     color: rgb(83, 114, 21);
     overflow: hidden;
@@ -14,6 +14,9 @@ main {
 }
 #hamburger:hover {
     background-color: rgb(127, 161, 59);
+}
+#menu button:hover {
+    background-color: #B1E052;
 }
 #menu{
     background-color: #B1E052 ;
@@ -31,6 +34,10 @@ hr {
     margin-top: 15px;
 }
 h1{
+    border-top: #1e2411 .5px solid;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 470px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size:25px;
@@ -40,13 +47,16 @@ h1{
     color: white;
     text-shadow: rgb(75, 75, 75) 1px 1px;
 }
-main > h1:first-of-type{
+
+body > h1{
     font-family: 'Permanent Marker', cursive;
     font-size: 45px;
+    width: 100%;
     border-top: #1e2411 .5px solid;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
+
 a{
     text-decoration: none;
     color: #435029;
@@ -77,23 +87,54 @@ button {
 main > section {
     margin-top: 60px;
     margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-
+@media screen and (min-width: 480px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    hr {
+        visibility: hidden;
+    }
+    #wideMenu {
+        background-color: rgb(147, 180, 80);
+    }
+    #wideMenu button {
+        background-color: #fff2f2;
+        
+        color: #435029;
+        }
+    
+    #wideMenu button:hover {
+        background-color: #b8d877;
+        color: #555555;
+    }
+    h1 {
+        border-top: #1e2411 .5px solid;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 5px;
+    }
+}
 
 
 /* music */
 
 #music-section p{
-    font-size: 12px;
+    font-size: 16px;
     width: 290px;
     height: 240px;
-    line-height: 14px;
+    line-height: 19px;
     overflow: auto;
     background-color: rgb(240, 240, 240);
+    margin-left: 10px;
     
 }
 #music-section section{
-    width: 480px;
+    width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -133,6 +174,7 @@ main > section {
 #food-section section div {
     
     flex-direction: column;
+    width: 100%;
     /* justify-content: space-around; */
 
 }
@@ -162,45 +204,57 @@ color: #435029;
 }
 
 
-/* event */
+/* events */
 
 #event-section section div{
-    /* background-color: #B1E052; */
-    font-size: 20px;
-    
+    font-size: 20px; 
 }
+
 #event-section section {
     background-color: rgb(252, 251, 250);
     width:480px;
-    /* height:360px; */
-    border-top: solid black .2px;
-    
-    
+    border-top: solid black .2px; 
 }
+
 #event-section{
     height: fit-content;
 }
+
+#event-section span {
+    display: flex;
+    flex-direction: row;
+}
+
 #event-section p{
     overflow: hidden;
-    padding-top:20px;
-    line-height: 18px;
+    padding: 1em;
+    line-height: 1.2em;
 }
+
+#event-section h4 {
+    line-height: 1.2em;
+    padding-left: 1em;
+    margin-top: 0.8em;
+}
+
+#event-section hr {
+    border: #1e2411 1px solid;
+}
+
 #event-section section button {
     background-color: #ccdab0;
     border-radius: 8px;
     border-style: none;
     border-top: .5px black solid;
     color: #435029;
+    margin-left: 16px;
 }
-    #event-section section button:hover {
+
+#event-section section button:hover {
     background-color: #b8d877;
     color: #555555;
 }
-#event-section span {
-    flex-direction: row;
-    width: 400px;
-    height: 70px;
-}
+
 
 /* news */
 
@@ -211,17 +265,14 @@ color: #435029;
     width:480px;
     height: fit-content;
     /* background-color: red; */
-    padding: 3px;
+    
     border-top: solid black .2px;
     
 }
 #news-section section div{
-    
     width: 220px;
-    padding: 5px;
-    padding: 5px;
-    
 }
+
 #news-section img {
     width: 110px;
 }
@@ -239,6 +290,37 @@ color: #435029;
     background-color: #b8d877;
     color: #555555;
 }
-#trivia-section section{
-    /* border:solid black 5px; */
+
+/* trivia */
+#trivia-section {
+    line-height: 1.2em;
+}
+
+.trivia-answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.trivia-answers p{
+    border: 1px solid rgb(147, 180, 80);
+    border-radius: 8px;    
+    width: 130px;
+    padding: 5px;
+    margin: 5px auto;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+}
+
+#trivia-section section div p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#trivia-section section div p:hover {
+    background-color: #b8d877;
+    color: #555555;
+
 }
