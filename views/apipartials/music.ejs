@@ -1,5 +1,5 @@
 <% if(musicList) { %>
-  <h1>Here are some similar artists for you to check out!</h1>
+<h1>Here are some similar artists for you to check out!</h1>
 <% musicList.forEach(artist => { %>
 <section>
   <div>
@@ -7,27 +7,27 @@
     <p><%= artist.teaser +" " + artist.wikilink  %></p>
   </div>
   <div>
-  <iframe width="190" height="150" src="<%= artist.youtubeLink %>" frameborder="0">
-    <a href="<%= artist.youtubeLink %>">Youtube Channel for this artist</a>
-  </iframe>
-  <% if (displayFavs) { %>
-  <form action="<%= '/favorites/music?_method=DELETE' %>" method="post">
-    <input type="hidden" name="name" value="<%= artist.name %>">
-    <input type="hidden" name="teaser" value="<%= artist.teaser %>">
-    <input type="hidden" name="wikilink" value="<%= artist.wikilink %>">
-    <input type="hidden" name="youtubeLink" value="<%= artist.youtubeLink %>">
-    <button type="submit">Delete from Favorites</button>
-  </form>
-  <% } else { %>
-  <form action="result/music" method="post">
-    <input type="hidden" name="name" value="<%= artist.name %>">
-    <input type="hidden" name="teaser" value="<%= artist.teaser %>">
-    <input type="hidden" name="wikilink" value="<%= artist.wikilink %>">
-    <input type="hidden" name="youtubeLink" value="<%= artist.youtubeLink %>">
-    <button type="submit">Save This Artist</button>
-  </form>
-  <% } %>
-  <button class="seeNextMusic"> See more artists </button>
+    <iframe width="190" height="150" src="<%= artist.youtubelink %>" frameborder="0">
+      <a href="<%= artist.youtubelink %>">Youtube Channel for this artist</a>
+    </iframe>
+    <% if (displayFavs) { %>
+    <form action="<%= '/favorites/music?_method=DELETE' %>" method="post">
+      <input type="hidden" name="name" value="<%= artist.name %>">
+      <input type="hidden" name="teaser" value="<%= artist.teaser %>">
+      <input type="hidden" name="wikilink" value="<%= artist.wikilink %>">
+      <input type="hidden" name="youtubelink" value="<%= artist.youtubelink %>">
+      <button type="submit">Delete from Favorites</button>
+    </form>
+    <% } else { %>
+    <form action="result/music" method="post">
+      <input type="hidden" name="name" value="<%= artist.name %>">
+      <input type="hidden" name="teaser" value="<%= artist.teaser %>">
+      <input type="hidden" name="wikilink" value="<%= artist.wikilink %>">
+      <input type="hidden" name="youtubelink" value="<%= artist.youtubelink %>">
+      <button type="submit">Save This Artist</button>
+    </form>
+    <% } %>
+    <button class="seeNextMusic"> See more artists </button>
   </div>
 </section>
 <% }) %>
