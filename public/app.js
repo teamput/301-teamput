@@ -101,6 +101,20 @@ function newsOptions() {
 }
 newsOptions();
 
+function triviaOptions() {
+
+  let currenttrivia = 1;
+  $('#trivia-section section').toggle();
+  $(`#trivia-section section:nth-of-type(${currenttrivia})`).toggle();
+
+
+  $('.seeNextTrivia').on('click', () => {
+    currenttrivia += 1;
+    $(`#trivia-section section:nth-of-type(${currenttrivia})`).slideDown();
+  })
+
+}
+triviaOptions();
 
 
 // randomizing order of trivia questions

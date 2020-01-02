@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/about-us.css">
+    <link rel="stylesheet" href="/styles/layout.css">
     <title>About the Devs</title>
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/resultLayout.css">
     <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/resultModules.css">
     <link rel="stylesheet" href="/styles/state.css">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Permanent+Marker&display=swap" rel="stylesheet">
 </head>
-
+<main>
 <body>
     <header>
         <section id="hamburger">
@@ -34,41 +37,57 @@
         </div>
     </header>
     <h1>About Us</h1>
+    <div id="wideMenu">
+        <!-- this is hidden until hamburger menu is clicked -->
+        <ul>
+            <li><form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form></li>
+            <li><form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form></li>
+            <li><form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form></li>
+            <li><form style="display: inline" action="/" method="get"><button>Home</button></form></li>
+            
+        </ul>
+        <hr>
+    </div>
     <main>
-        <section>
-            <img src="" alt="">
-            <p>Vik Akam is really cool </p>
-        </section>
+    <section>
+        <h1>Vik Akam</h1>
+        <img src="images/Vikbioimage.jpg" alt="">
+        <p>I'm a full-stack software developer. I've lived most of my life in Seattle, WA,
+            and I'm proud to call it my home. I graduated from the University of Washington with a BS in
+            Biochemistry with an intent on practicing medicine. After deciding to step away from health care for the
+            time being, I began my journey in software development with Code Fellows. I'm excited to work toward
+            landing a job with a
+            company that develops software to improve people's lives and changes our world for the better. I'm eager
+            to work on aspects of software that increase performance, improve memory allocation, and revolutionize
+            the user experience.</p>
+    </section>
+    <hr>
 
-        <section>
-            <img src="" alt="">
-            <p>My name is Pete Alba and I'm a javascript software developer with a background in music/education. Music
-                software has become a valuable resource in music
-                education, music production and countless of other areas . I would love to work in an area of coding
-                that seeks to educate or entertain in some way and I believe my
-                ability to inspire my students will help me become a valuable asset in this arena.</p>
-        </section>
+    <section>
+        <h1>Pete Alba</h1>
+        <img src="images/petebiopic.png" alt="">
+        <p> I'm a software developer with a background in music/education. Music software has become a valuable resource in music
+            education, music production and countless of other areas . I would love to work in an area of coding that seeks to educate or entertain in some way and I believe my
+            ability to inspire my students will help me become a valuable asset in this arena.</p>
+    </section>
+    <hr>
 
-        <section>
-            <img src="" alt="">
-            <p>Laura Antonius is also cool</p>
-        </section>
-
-        <section>
-            <img src="" alt="">
-            <p>I'm Isaac Nelson and I am a fullstack web developer, a transitioning Marine Corps Veteran, and very soon
-                to be a brand new father! In my past I found myself always wanting more out of my jobs, I remember my
-                first squad leader telling me that I was always so reserved because the things we were doing were not
-                intelectually engaging enough for me. I'll be honest I had no idea what he was talking about until I
-                decided to give coding a try last summer. Now I understand, once I engaged in the level of mental
-                exercise that programming takes, it felt like my mind was finally stretching it's legs! I love learning
-                what it takes to create something new, for the first time in my life I feel real meaning in what I do,
-                And I cant wait to do more! </p>
-        </section>
-    </main>
+    <section>
+        <h1>Laura Antonius</h1>
+        <img src="images/Laurabiopic.jpg" alt="">
+        <p>I'm a full-stack Javascript software developer. Like a lot of people in the field, I have a diverse background that brings unique strengths to the table. 
+            From my experience as a professional musician, I've cultivated an exceptional attention to detail and a pretty robust work ethic, along with the confidence to speak comfortably in front of large groups.  My love of music corresponds strongly with my interest in being a developer, since there are a lot of similarities between the two fields: the need for independent practice and self-teaching, intense collaboration with colleagues, and a creative outlet to produce meaningful and beautiful things.
+            I’m also drawing on my experience in healthcare and I would love to secure a developer role in a healthcare organization, and help produce software that streamlines the experience of healthcare consumers, to make their experiences seeking care as efficient and painless as possible.</p>
+    </section>
+    <hr>
+    <section>
+        <h1>Isaac Nelson</h1>
+        <img src="images/isaacBioPic.jpg" alt="">
+        <p>I am a fullstack web developer, a transitioning Marine Corps Veteran, and very soon to be a brand new father! In my past I found myself always wanting more out of my jobs, I remember my first squad leader telling me that I was always so reserved because the things we were doing were not intelectually engaging enough for me. I'll be honest I had no idea what he was talking about until I decided to give coding a try last summer. Now I understand, once I engaged in the level of mental exercise that programming takes, it felt like my mind was finally stretching it's legs! I love learning what it takes to create something new, for the first time in my life I feel real meaning in what I do, And I cant wait to do more! </p>
+    </section>
+</main>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="/app.js"></script>
 
 </body>
-
 </html>

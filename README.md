@@ -1,5 +1,16 @@
 # I'm Bored!
-An app that suggests things for you to do when you've got nothing else to do.
+An app that suggests things for you to do when you've got nothing else to do. Our app provides the user, a bored person, with a quiz on which they can indicate their location, interests, and whether or not they're hungry. Based on their input, API calls are made to a number of APIs and results are returned that are relevant to the user.
+
+## Required Packages and Libraries
+* express
+* pg
+* superagent
+* dotenv
+* ejs
+* method-override
+
+## Installation Instructions
+In order to run this app on your computer, after cloning the repo, install all the necessary packages and libraries. The user also needs to obtain API keys for the following APIs: Google Geocode, Yelp, Eventful, New York Times, and TasteDive, (there is also a trivia API in use which does not require an API key), all of which are stored in a local env file. Also needed is postgres, with a database called im_bored, according the the repo's schema.
 
 ## Group members
 Vik Akam, Pete Alba, Laura Antonius, Isaac Nelson
