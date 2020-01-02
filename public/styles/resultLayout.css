@@ -204,45 +204,57 @@ color: #435029;
 }
 
 
-/* event */
+/* events */
 
 #event-section section div{
-    /* background-color: #B1E052; */
-    font-size: 20px;
-    
+    font-size: 20px; 
 }
+
 #event-section section {
     background-color: rgb(252, 251, 250);
     width:480px;
-    /* height:360px; */
-    border-top: solid black .2px;
-    
-    
+    border-top: solid black .2px; 
 }
+
 #event-section{
     height: fit-content;
 }
+
+#event-section span {
+    display: flex;
+    flex-direction: row;
+}
+
 #event-section p{
     overflow: hidden;
-    padding-top:20px;
-    line-height: 18px;
+    padding: 1em;
+    line-height: 1.2em;
 }
+
+#event-section h4 {
+    line-height: 1.2em;
+    padding-left: 1em;
+    margin-top: 0.8em;
+}
+
+#event-section hr {
+    border: #1e2411 1px solid;
+}
+
 #event-section section button {
     background-color: #ccdab0;
     border-radius: 8px;
     border-style: none;
     border-top: .5px black solid;
     color: #435029;
+    margin-left: 16px;
 }
-    #event-section section button:hover {
+
+#event-section section button:hover {
     background-color: #b8d877;
     color: #555555;
 }
-#event-section span {
-    flex-direction: row;
-    width: 400px;
-    height: 70px;
-}
+
 
 /* news */
 
@@ -258,11 +270,9 @@ color: #435029;
     
 }
 #news-section section div{
-    
     width: 220px;
-    
-    
 }
+
 #news-section img {
     width: 110px;
 }
@@ -280,6 +290,37 @@ color: #435029;
     background-color: #b8d877;
     color: #555555;
 }
-#trivia-section section{
-    width: 480px;
+
+/* trivia */
+#trivia-section {
+    line-height: 1.2em;
+}
+
+.trivia-answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.trivia-answers p{
+    border: 1px solid rgb(147, 180, 80);
+    border-radius: 8px;    
+    width: 130px;
+    padding: 5px;
+    margin: 5px auto;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+}
+
+#trivia-section section div p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#trivia-section section div p:hover {
+    background-color: #b8d877;
+    color: #555555;
+
 }
