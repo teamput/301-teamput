@@ -147,24 +147,28 @@ function hideAndShowQuiz() {
   $('#finalsubmit').hide();
 
   const showLocation = () => {
-    $('#locationform').toggle();
+    $('#locationform').show();
     clearInterval(id);
   };
   let id = setInterval(showLocation, 1500);
 
-  $('#showyelp').on('click', function () {
+  $('#showyelpbutton').on('click', function () {
+    $('#locationform').hide();
     $('#yelpform').show();
   });
 
   $('#yelpform').on('change', function () {
+    $('#yelpform').hide();
     $('#trivia').show();
   });
 
   $('#trivia').on('change', function () {
+    $('#trivia').hide();
     $('#eventfulform').show();
   });
 
   $('#eventfulform').on('change', function () {
+    $('#eventfulform').hide();
     $('#tastediveform').show();
     $('#finalsubmit').show();
   });

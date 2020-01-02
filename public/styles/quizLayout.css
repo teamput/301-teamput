@@ -1,3 +1,7 @@
+* {
+    outline: none;
+}
+
 h1 {
     font-size: 30px;
     justify-self: center;
@@ -6,17 +10,13 @@ h1 {
     
     color: #7E1344;
 }
-main form{
+main div, main div form fieldset {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    height: 1000px;
-    
+    justify-content: center;
 }
 h3 {
-    margin-left: 15px;
-    padding-bottom: 12px;
-    
+    display: flex;
+    justify-content: center;
 }
 hr {
     border: #D776A2 solid 2px;
@@ -25,7 +25,6 @@ hr {
 fieldset {
     /* border: 1px black solid; */
     font-size: 20px;
-    height: 350px;
    width: 480px;
     /* flex-direction: column; */
 }
@@ -65,7 +64,6 @@ header{
 #locationInput {
     margin-left: 30px;
     width: 400px;
-    height: 40px;
     font-size: 20px;
 }
 input[type="radio"]:checked + label {
@@ -97,11 +95,10 @@ form label:hover {
 #musicInput {
     margin-left: 30px;
     width: 400px;
-    height: 40px;
     font-size: 20px;
 }
 
-#showyelp {
+#showyelpbutton {
     align-self: center;
     border: rebeccapurple 1px solid;
     border-radius: 10px;
