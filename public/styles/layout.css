@@ -9,34 +9,73 @@ header {
     width: fit-content;
     /* flex-direction: row; */
 }
-#menu button {
-margin-top: 0%;
-border-style: none;
+h1 {
+    
+    border-top: #1e2411 .5px solid;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 470px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size:25px;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    color: white;
+    text-shadow: rgb(75, 75, 75) 1px 1px;
 }
-
 #hamburger {
     max-width: 64px;
 }
-@media screen and (min-width: 481px) {
-    header {
-        position: absolute;
-        top: 1px;left: 1px;
-        /* display: flex;
-        flex-direction: row; */
-    }
-    #menu {
-        /* border: orange 1px solid; */
-        width: fit-content;
-        visibility: visible;
-        /* flex-direction: row; */
-    }
-    #menu button {
+button {
+    
+    border-radius: 8px;
+    border-style: none;
+    border-top: .5px black solid;
+    width: 130px;
+    height: 35px;
+    font-family: 'Bree Serif', serif;
+    font-size: 10px;
+}
+#menu button {
     margin-top: 0%;
     border-style: none;
+    border-radius: unset;
+}
+#wideMenu {
+    visibility: hidden;
+}
+@media screen and (min-width: 481px) {
+    #menu {
+        visibility: hidden;
     }
-    
+    h1:first-of-type{
+        width: 100%;
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+       
+    }
     #hamburger {
       visibility: hidden;
     }
-    
+ 
+    #wideMenu {
+        visibility: visible;
+        width: 100%;
+        padding-top: 10px;
+        height: fit-content;
+        margin-top: 0px;
+        
+    }
+    #wideMenu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+    }
 }

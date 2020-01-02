@@ -1,0 +1,46 @@
+body{
+    background-color: lightgreen;
+    text-align: center;
+}
+img{
+    width:480px;
+}
+
+main {
+    margin-top: 100px;
+    display: inline-block;
+}
+#hamburger img {
+    width: unset;
+}
+section{
+    background-color: rgb(83, 114, 21);    
+    text-align: center;
+    border: solid black 1px;
+    border-radius: 8px;
+    margin:10px;
+}
+section:hover{
+    transform: scale(1.2)
+
+}
+h1{font-family: 'Permanent Marker', cursive;
+    font-size: 45px;
+    text-align: center;
+    /* border: solid black 1px; */
+    border-radius: 8px;
+   
+}
+P{
+    line-height: 18px;
+    padding: 9px;
+    width:480px;
+    overflow: auto;
+    background-color: lightyellow;
+    font-family: 'Bree Serif', serif;
+}
+hr{
+    border:solid green;
+    margin-top:35px;
+    margin-bottom:35px;
+}

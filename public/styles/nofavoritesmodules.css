@@ -1,0 +1,55 @@
+h1 {
+  background-color: #705D56;
+  line-height: 1.5em;
+}
+
+h4 {
+  line-height: 1.5em;
+  color: #32292F;
+  width: fit-content;
+  font-family: 'Bree Serif', serif;
+}
+
+#wideMenu {
+  background-color: #70ABAF;
+  padding-bottom: 18px;
+}
+#wideMenu button:hover {
+  background-color: rgb(239, 191, 248);
+}
+
+* {
+  font-family: 'Bree Serif', serif;
+}
+
+li {
+  font-size: 16px;
+}
+
+main {
+  background-color: rgb(161, 223, 228);
+  
+  height: 400px;
+  font-size: 18px;
+}
+
+#hamburger {
+  background-color: #70ABAF;
+}
+form button {
+ /* margin-left: 65px; */
+ background-color: cadetblue;
+}
+form button:hover {
+  
+  background-color: rgb(239, 191, 248);
+}
+div {
+  padding: 20px;
+  height: fit-content;
+  
+  margin: auto;
+  
+  border: cadetblue .5px solid;
+  background-color: rgb(254, 254, 255);
+}

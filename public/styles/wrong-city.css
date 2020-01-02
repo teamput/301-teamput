@@ -1,0 +1,19 @@
+  
+#wrong-city{
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    width:480px;
+    font-size: 40px;
+    background-color: red;
+    border: solid lightskyblue 5px;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 200px;
+    padding-left:5px;
+}
+#city-button{
+    width: 100px;
+    height:50px;
+    color:black;
+    font-family: 'Permanent Marker', cursive;
+}
