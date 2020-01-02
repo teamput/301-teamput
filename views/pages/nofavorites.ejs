@@ -17,8 +17,27 @@
 </head>
 
 <body>
-  <h1>You have no saved favorites. Add some!</h1>
-  <form action="/quiz" method="get">
-    <button type="submit">Take the Quiz!</button>
-  </form>
+  <header>
+    <section id="hamburger">
+      <img src="/images/190-menu.png">
+    </section>
+
+    <div id="menu">
+      <!-- this is hidden until hamburger menu is clicked -->
+      <ul>
+        <li><a href="/aboutUs"> About the Devs</a></li>
+        <li><a href="/favorites">View My Favorites</a></li>
+        <li><a href="/result">My Most Recent Results</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <h1>You have no saved favorites. Add some!</h1>
+    <form action="/quiz" method="get">
+      <button type="submit">Take the Quiz!</button>
+    </form>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/app.js"></script>
 </body>
