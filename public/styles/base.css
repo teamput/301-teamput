@@ -2,6 +2,5 @@ body {
     box-sizing: border-box;
     max-width: 480px;
     /* display: flex; */
-    background-color: background-color: rgb(245, 245, 245);
     font-family: 'Gothic A1', sans-serif;
 }
