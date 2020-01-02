@@ -2,9 +2,9 @@
 <h1>Train your brain - no pain, no gain.</h1>
 
 <% triviaList.forEach((question, index) => { %>
-<section>
+  <section>
+      <h2>Category: <%= question.category %></h2>
   <div>
-    <h2>Category: <%= question.category %></h2>
     <p>Question: <%= question.question %></p>
     <div class="trivia-answers">
       <p class="trivia-<%= index %>" data-correct="true"> <%= question.correct_answer %></p>
