@@ -1,0 +1,32 @@
+h1 {
+  background-color: rgb(74, 74, 216);
+}
+main {
+  margin-top: 0px;
+}
+#hamburger {
+  background-color: rgb(42, 42, 212);
+  border: unset;
+}
+#hamburger:hover {
+  background-color: rgb(148, 148, 185);
+  
+}
+#wideMenu {
+  background-color: rgb(49, 145, 135);
+}
+#wideMenu button:hover{
+  background-color: rgb(164, 201, 255);
+}
+.seeNextFood {
+  visibility: hidden;
+}
+.seeNextMusic {
+  visibility: hidden;
+}
+.seeNextNews {
+  visibility: hidden;
+}
+.seeNextEvent {
+  visibility: hidden;
+}

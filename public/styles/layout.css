@@ -65,6 +65,7 @@ button {
         width: 100%;
         padding-top: 10px;
         height: fit-content;
+        margin-top: 0px;
         
     }
     #wideMenu ul {
