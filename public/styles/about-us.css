@@ -10,11 +10,13 @@ main {
     margin-top: 100px;
     display: inline-block;
 }
-
+#hamburger img {
+    width: unset;
+}
 section{
     background-color: rgb(83, 114, 21);    
     text-align: center;
-    border: solid black 2px;
+    border: solid black 1px;
     border-radius: 8px;
     margin:10px;
 }
@@ -23,12 +25,15 @@ section:hover{
 
 }
 h1{font-family: 'Permanent Marker', cursive;
+    font-size: 45px;
     text-align: center;
-    border: solid black 3px;
+    /* border: solid black 1px; */
     border-radius: 8px;
    
 }
 P{
+    line-height: 18px;
+    padding: 9px;
     width:480px;
     overflow: auto;
     background-color: lightyellow;
