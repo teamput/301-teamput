@@ -1,0 +1,41 @@
+body{
+    background-color: lightgreen;
+    text-align: center;
+}
+img{
+    width:480px;
+}
+
+main {
+    margin-top: 100px;
+    display: inline-block;
+}
+
+section{
+    background-color: rgb(83, 114, 21);    
+    text-align: center;
+    border: solid black 2px;
+    border-radius: 8px;
+    margin:10px;
+}
+section:hover{
+    transform: scale(1.2)
+
+}
+h1{font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    border: solid black 3px;
+    border-radius: 8px;
+   
+}
+P{
+    width:480px;
+    overflow: auto;
+    background-color: lightyellow;
+    font-family: 'Bree Serif', serif;
+}
+hr{
+    border:solid green;
+    margin-top:35px;
+    margin-bottom:35px;
+}
