@@ -2,6 +2,17 @@ body {
     box-sizing: border-box;
     max-width: 480px;
     /* display: flex; */
-    background-color: background-color: rgb(245, 245, 245);
     font-family: 'Gothic A1', sans-serif;
+}
+
+@media screen and (min-width: 481px) {
+    body {
+        box-sizing: border-box;
+        max-width: 1200px;
+        font-family: 'Gothic A1', sans-serif;
+    }
+    main {
+        border: orange 2px solid;
+    }
+    
 }

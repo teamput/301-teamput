@@ -26,15 +26,19 @@
         <div id="menu">
             <!-- this is hidden until hamburger menu is clicked -->
             <ul>
-                <li><a href="/aboutUs"> About the Devs</a></li>
-                <li><a href="/favorites">View My Favorites</a></li>
-                <li><a href="/result">My Most Recent Results</a></li>
-                <li><a href="/">Home</a></li>
+                <li><button><a href="/aboutUs"> About the Devs</a></button></li>
+                <li><button><a href="/favorites">View My Favorites</a></button></li>
+                <li><button><a href="/result">My Most Recent Results</a></button></li>
+                <li><button><a href="/">Home</a></button></li>
             </ul>
         </div>
     </header>
+    
+    <h1>Lets cure that boredom!</h1>
     <main>
-        <h1>Lets cure that boredom!</h1>
+        <div id="topImg">
+            <img src="/public/images/fun.png">
+        </div>
         <div id="food-section">
             <%- include('../apipartials/yelp') %>
         </div>

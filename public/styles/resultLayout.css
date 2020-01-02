@@ -1,5 +1,5 @@
 main {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     /* background-color: rgb(245, 245, 245); */
     color: rgb(83, 114, 21);
     overflow: hidden;
@@ -14,6 +14,9 @@ main {
 }
 #hamburger:hover {
     background-color: rgb(127, 161, 59);
+}
+#menu button:hover {
+    background-color: #B1E052;
 }
 #menu{
     background-color: #B1E052 ;
@@ -40,7 +43,10 @@ h1{
     color: white;
     text-shadow: rgb(75, 75, 75) 1px 1px;
 }
-main > h1:first-of-type{
+#topImg {
+   visibility: hidden;
+}
+body > h1:first-of-type{
     font-family: 'Permanent Marker', cursive;
     font-size: 45px;
     border-top: #1e2411 .5px solid;
@@ -84,12 +90,13 @@ main > section {
 /* music */
 
 #music-section p{
-    font-size: 12px;
+    font-size: 16px;
     width: 290px;
     height: 240px;
-    line-height: 14px;
+    line-height: 19px;
     overflow: auto;
     background-color: rgb(240, 240, 240);
+    margin-left: 10px;
     
 }
 #music-section section{
@@ -133,6 +140,7 @@ main > section {
 #food-section section div {
     
     flex-direction: column;
+    width: 100%;
     /* justify-content: space-around; */
 
 }
