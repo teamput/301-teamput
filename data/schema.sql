@@ -62,7 +62,7 @@ IF NOT EXISTS music_favs
   teaser TEXT,
   wikilink VARCHAR
 (100),
-  youtubeLink VARCHAR
+  youtubelink VARCHAR
 (100)
 );
 

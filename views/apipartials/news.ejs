@@ -1,15 +1,19 @@
 <% if (newsList) { %>
-<% newsList.forEach(article => { %>
 <h1>News of the Day</h1>
+<% newsList.forEach(article => { %>
 <section>
-  <h2>HEADLINE: <%= article.headline %></h2>
   <div>
+    <h2>HEADLINE: <%= article.headline %></h2>
+    <p><%= article.abstract %></p>
+    <hr>
     <p>Publication Date: <%= article.date %></p>
-    <p>Abstract: <%= article.abstract %></p>
-    <p><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></p>
+    <hr>
     <p>Byline: <%= article.byline %></p>
+
+  </div>
+  <div>
     <img src="<%=article.image %>">
-    <p>Source: <%= article.source %></p>
+    <button><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></button>
     <% if (displayFavs) { %>
     <form action="<%= '/favorites/news?_method=DELETE' %>" method="post">
       <input type="hidden" name="headline" value="<%= article.headline %>">
@@ -29,11 +33,11 @@
         <input type="hidden" name="byline" value="<%= article.byline %>">
         <input type="hidden" name="image" value="<%= article.image %>">
         <input type="hidden" name="source" value="<%= article.source %>">
-        <button type="submit">Add to Favorite News Stories</button>
+        <button class="add-to-fav" type="submit">Add to My Favorites</button>
         <% } %>
       </form>
+      <button class="seeNextNews"> See more News Articles</button>
   </div>
-
 </section>
 <% }) %>
 <% } else { %>
