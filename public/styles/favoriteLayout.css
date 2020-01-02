@@ -1,11 +1,51 @@
+main > h1:first-of-type {
+  font-family: 'Permanent Marker', cursive;
+}
+
 h1 {
-  background-color: rgb(74, 74, 216);
+  background-color: #011627;
+  padding: 0;
 }
+
+h2 {
+  background-color: #41EAD4;
+  color: #011627;
+}
+
+h4, p, li {
+  color: #011627;
+}
+
+hr {
+  border: #011627;
+}
+
 main {
-  margin-top: 0px;
+  margin: 0.5%;
 }
+
+section {
+  width: 490px;
+}
+
+#news-section section div h2 {
+  width: 240px;
+}
+
+li, a, h4 {
+  font-family: 'Bree Serif', serif;
+}
+
+#news-section section div {
+  width: 240px;
+}
+
+#food-section li {
+  text-align: center;
+}
+
 #hamburger {
-  background-color: rgb(42, 42, 212);
+  background-color: #41EAD4;
   border: unset;
 }
 #hamburger:hover {
