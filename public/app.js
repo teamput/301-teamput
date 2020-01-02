@@ -6,7 +6,7 @@ $(function mobileClick() {
   $('#hamburger').on('click', () => {
     //show or hide header with transition
     console.log('clicked');
- 
+
     $('#menu').slideToggle();
   });
 })
@@ -100,3 +100,13 @@ function newsOptions(){
   
 }
 newsOptions();
+
+
+// changing colors of selected trivia answers
+$('[data-correct=true]').click(function () {
+  $(this).toggleClass('correct');
+});
+$('[data-correct=false]').click(function () {
+  $(this).toggleClass('incorrect');
+});
+
