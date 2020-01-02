@@ -152,25 +152,45 @@ function hideAndShowQuiz() {
   };
   let id = setInterval(showLocation, 1500);
 
-  $('#showyelpbutton').on('click', function () {
+  $('#showyelpbuttonfwd').on('click', function () {
     $('#locationform').hide();
     $('#yelpform').show();
   });
 
-  $('#yelpform').on('change', function () {
+  $('#showlocationbutton').on('click', function () {
+    $('#yelpform').hide();
+    $('#locationform').show();
+  });
+
+  $('#showtriviabuttonfwd').on('click', function () {
     $('#yelpform').hide();
     $('#trivia').show();
   });
 
-  $('#trivia').on('change', function () {
+  $('#showyelpbuttonbk').on('click', function () {
+    $('#trivia').hide();
+    $('#yelpform').show();
+  });
+
+  $('#showeventsbuttonfwd').on('click', function () {
     $('#trivia').hide();
     $('#eventfulform').show();
   });
 
-  $('#eventfulform').on('change', function () {
+  $('#showtriviabuttonbk').on('click', function () {
     $('#eventfulform').hide();
-    $('#tastediveform').show();
+    $('#trivia').show();
+  });
+
+  $('#showmusicbuttonfwd').on('click', function () {
+    $('#eventfulform').hide();
     $('#finalsubmit').show();
+    $('#tastediveform').show();
+  });
+
+  $('#showeventsbuttonbk').on('click', function () {
+    $('#tastediveform').hide();
+    $('#eventfulform').show();
   });
 }
 $(document).ready(hideAndShowQuiz);

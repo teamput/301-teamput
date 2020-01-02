@@ -41,32 +41,33 @@
 
       <form id="details-form" action="<%= '/quiz?_method=PUT' %>" method='post'>
 
-        <fieldset id="locationform">
-          <hr>
-          <h3>Where do you live?</h3>
-          <input id="locationInput" type="text" name="location" placeholder="last location" required>
-          <button id="showyelpbutton" type="submit">></button>
-          <hr>
-        </fieldset>
+        <section id="locationform">
 
-        <fieldset id="yelpform">
-          <hr>
-          <button id="showlocationbutton" type="submit">
-            <</button> <h3> Are you feeling hungry?</h3>
+          <fieldset>
+            <h3>Where do you live?</h3>
+            <input id="locationInput" type="text" name="location" placeholder="last location" required>
+          </fieldset>
+          <button id="showyelpbuttonfwd" type="button">></button>
+        </section>
+
+        <section id="yelpform">
+          <button id="showlocationbutton" type="button">
+            <</button> <fieldset>
+              <h3> Are you feeling hungry?</h3>
               <label for="yes">Yes
                 <input type="radio" name="hunger" value="yes" required>
               </label>
               <label for="no">No
                 <input type="radio" name="hunger" value="no" required>
               </label>
-              <button id="showtriviabutton" type="submit">></button>
-              <hr>
-        </fieldset>
+              </fieldset>
+              <button id="showtriviabuttonfwd" type="button">></button>
+        </section>
 
-        <fieldset id="trivia">
-          <hr>
-          <button id="showyelpbutton" type="submit">
-            <</button> <h3>Select a trivia category:</h3>
+        <section id="trivia">
+          <button id="showyelpbuttonbk" type="button">
+            <</button> <fieldset>
+              <h3>Select a trivia category:</h3>
               <label for="animals">Animals
                 <input type="radio" name="trivia" value="animals" required>
               </label>
@@ -88,16 +89,15 @@
               <label for="science-nature">Science and Nature
                 <input type="radio" name="trivia" value="science-nature" required>
               </label>
-              <button id="showeventsbutton" type="submit">></button>
-              <hr>
-              <hr>
-        </fieldset>
+              </fieldset>
+              <button id="showeventsbuttonfwd" type="button">></button>
+        </section>
 
 
-        <fieldset id="eventfulform">
-          <hr>
-          <button id="showtriviabutton" type="submit">
-            <</button> <h3>Choose your top interest from this list.</h3>
+        <section id="eventfulform">
+          <button id="showtriviabuttonbk" type="button">
+            <</button> <fieldset>
+              <h3>Choose your top interest from this list.</h3>
               <label for="concerts">Concerts
                 <input type="radio" name="interest" value="concert" required>
               </label>
@@ -119,20 +119,22 @@
               <label for="sports">Sports
                 <input type="radio" name="interest" value="sports" required>
               </label>
-              <button id="showmusicbutton" type="submit">></button>
-              <hr>
-              <hr>
-        </fieldset>
+              </fieldset>
+              <button id="showmusicbuttonfwd" type="button">></button>
+        </section>
 
-        <fieldset id="tastediveform">
-          <hr>
-          <button id="showeventsbutton" type="submit">
-            <</button> <h3>Type in your favorite artist here:</h3>
-              <input id="musicInput" type="text" name="music" placeholder="musician">
-              <hr>
-        </fieldset>
-        <button id="finalsubmit" type="submit">Un-bore Me</button>
+        <section id="tastediveform">
 
+          <button id="showeventsbuttonbk" type="button">
+            <</button> <article>
+              <fieldset>
+                <h3>Type in your favorite artist here:</h3>
+                <input id="musicInput" type="text" name="music" placeholder="musician">
+                <hr>
+              </fieldset>
+              <button id="finalsubmit" type="submit">Un-bore Me</button>
+              </article>
+        </section>
       </form>
     </div>
   </main>

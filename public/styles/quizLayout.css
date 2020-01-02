@@ -10,10 +10,20 @@ h1 {
     
     color: #7E1344;
 }
-main div, main div form fieldset {
+main div, main div form section fieldset {
     display: flex;
     justify-content: center;
 }
+
+main div form section, #tastediveform {
+  display: flex;
+}
+
+#tastediveform article {
+  display: flex;
+  flex-direction: column;
+}
+
 h3 {
     display: flex;
     justify-content: center;
@@ -23,10 +33,10 @@ hr {
     border-radius: 2px;
 }
 fieldset {
-    /* border: 1px black solid; */
+    display: flex;
+    flex-direction: row;
     font-size: 20px;
-   width: 480px;
-    /* flex-direction: column; */
+    width: 480px;
 }
 main {
     color: rgb(58, 9, 31) ;
