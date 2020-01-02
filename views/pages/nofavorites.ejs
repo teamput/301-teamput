@@ -11,12 +11,15 @@
   <link rel="stylesheet" href="/styles/resultLayout.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/resultModules.css">
+  <link rel="stylesheet" href="/styles/nofavoritesmodules.css">
   <link rel="stylesheet" href="/styles/state.css">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
   <header>
     <section id="hamburger">
       <img src="/images/190-menu.png">
@@ -32,12 +35,34 @@
       </ul>
     </div>
   </header>
+
+  <h1>Favorites</h1>
   <main>
-    <h1>You have no saved favorites. Add some!</h1>
-    <form action="/quiz" method="get">
-      <button type="submit">Take the Quiz!</button>
-    </form>
+    <div id="wideMenu">
+      <!-- this is hidden until hamburger menu is clicked -->
+      <ul>
+        <li>
+          <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/" method="get"><button>Home</button></form>
+        </li>
+
+      </ul>
+
+      <h4>You Don't Have Any Favorites Yet!</h4>
+      <form action="/quiz" method="get">
+        <button type="submit">Take the Quiz!</button>
+      </form>
+    </div>
   </main>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="/app.js"></script>
 </body>
