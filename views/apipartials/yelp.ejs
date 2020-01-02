@@ -2,10 +2,12 @@
 <h1>Since you're hungry...</h1>
 <% restaurantList.forEach(restaurant => { %>
 <section>
-  
-  <a href="<%= restaurant.url %>"><img src="<%= restaurant.image_url %>" alt="<%= restaurant.name %>"></a>
-  
-  <div id="foodData">
+  <div>
+    <a href="<%= restaurant.url %>"><img src="<%= restaurant.image_url %>" alt="<%= restaurant.name %>"></a>
+
+  </div>
+  <div>
+
     <h2><%= restaurant.name %></h2>
     <ul>
       <li><%= restaurant.is_closed %></li>
@@ -34,9 +36,10 @@
       <input type="hidden" name="rating" value="<%= restaurant.rating %>">
       <input type="hidden" name="price" value="<%= restaurant.price %>">
       <input type="hidden" name="distance" value="<%= restaurant.distance %>">
-      <button type="submit">Add to Favorite Restaurants</button>
+      <button class="add-to-fav" type="submit">Add to My Favorites</button>
     </form>
     <% } %>
+    <button class="seeNextFood">See more food</button>
   </div>
 </section>
 <% }) %>
