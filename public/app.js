@@ -136,3 +136,37 @@ $('.add-to-fav').on('click', function () {
     favBtn.text('Added To Favorites!');
   }
 });
+
+// hiding and showing one question at a time
+function hideAndShowQuiz() {
+  $('#locationform').hide();
+  $('#yelpform').hide();
+  $('#trivia').hide();
+  $('#eventfulform').hide();
+  $('#tastediveform').hide();
+  $('#finalsubmit').hide();
+
+  const showLocation = () => {
+    $('#locationform').toggle();
+    clearInterval(id);
+  };
+  let id = setInterval(showLocation, 1500);
+
+  $('#showyelp').on('click', function () {
+    $('#yelpform').show();
+  });
+
+  $('#yelpform').on('change', function () {
+    $('#trivia').show();
+  });
+
+  $('#trivia').on('change', function () {
+    $('#eventfulform').show();
+  });
+
+  $('#eventfulform').on('change', function () {
+    $('#tastediveform').show();
+    $('#finalsubmit').show();
+  });
+}
+$(document).ready(hideAndShowQuiz);

@@ -100,7 +100,18 @@ form label:hover {
     height: 40px;
     font-size: 20px;
 }
-main button {
+
+#showyelp {
+    align-self: center;
+    border: rebeccapurple 1px solid;
+    border-radius: 10px;
+    background-color: #E8A5C3;
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(94, 26, 73);
+}
+
+#finalsubmit {
     margin-top: 30px;
     margin-bottom: 50px;
     width: 200px;
