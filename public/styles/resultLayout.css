@@ -34,6 +34,10 @@ hr {
     margin-top: 15px;
 }
 h1{
+    border-top: #1e2411 .5px solid;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 470px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size:25px;
@@ -43,16 +47,16 @@ h1{
     color: white;
     text-shadow: rgb(75, 75, 75) 1px 1px;
 }
-#topImg {
-   visibility: hidden;
-}
-body > h1:first-of-type{
+
+body > h1{
     font-family: 'Permanent Marker', cursive;
     font-size: 45px;
+    width: 100%;
     border-top: #1e2411 .5px solid;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
+
 a{
     text-decoration: none;
     color: #435029;
@@ -83,8 +87,38 @@ button {
 main > section {
     margin-top: 60px;
     margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-
+@media screen and (min-width: 480px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    hr {
+        visibility: hidden;
+    }
+    #wideMenu {
+        background-color: rgb(147, 180, 80);
+    }
+    #wideMenu button {
+        background-color: #fff2f2;
+        
+        color: #435029;
+        }
+    
+    #wideMenu button:hover {
+        background-color: #b8d877;
+        color: #555555;
+    }
+    h1 {
+        border-top: #1e2411 .5px solid;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 5px;
+    }
+}
 
 
 /* music */
@@ -100,7 +134,7 @@ main > section {
     
 }
 #music-section section{
-    width: 480px;
+    width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -219,15 +253,14 @@ color: #435029;
     width:480px;
     height: fit-content;
     /* background-color: red; */
-    padding: 3px;
+    
     border-top: solid black .2px;
     
 }
 #news-section section div{
     
     width: 220px;
-    padding: 5px;
-    padding: 5px;
+    
     
 }
 #news-section img {
@@ -248,5 +281,5 @@ color: #435029;
     color: #555555;
 }
 #trivia-section section{
-    /* border:solid black 5px; */
+    width: 480px;
 }

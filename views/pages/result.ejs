@@ -35,10 +35,18 @@
     </header>
     
     <h1>Lets cure that boredom!</h1>
-    <main>
-        <div id="topImg">
-            <img src="/public/images/fun.png">
+    <div id="wideMenu">
+            <!-- this is hidden until hamburger menu is clicked -->
+            <ul>
+                <li><form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form></li>
+                <li><form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form></li>
+                <li><form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form></li>
+                <li><form style="display: inline" action="/" method="get"><button>Home</button></form></li>
+                
+            </ul>
+            <hr>
         </div>
+    <main>
         <div id="food-section">
             <%- include('../apipartials/yelp') %>
         </div>
