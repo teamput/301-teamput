@@ -17,24 +17,42 @@
 </head>
 
 <body>
-  <h1>Your Favorite Stuff:</h1>
-  <div id="food-section">
-    <%- include('../apipartials/yelp') %>
-  </div>
-  <hr>
-  <div id="music-section">
-    <%- include('../apipartials/music') %>
-  </div>
-  <hr>
-  <div id="event-section">
-    <%- include('../apipartials/events') %>
-  </div>
-  <hr>
-  <div id="news-section">
-    <%- include('../apipartials/news') %>
-  </div>
-  <hr>
+  <header>
+    <section id="hamburger">
+      <img src="/images/190-menu.png">
+    </section>
 
+    <div id="menu">
+      <!-- this is hidden until hamburger menu is clicked -->
+      <ul>
+        <li><a href="/aboutUs"> About the Devs</a></li>
+        <li><a href="/favorites">View My Favorites</a></li>
+        <li><a href="/result">My Most Recent Results</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <h1>Your Favorite Stuff:</h1>
+    <div id="food-section">
+      <%- include('../apipartials/yelp') %>
+    </div>
+    <hr>
+    <div id="music-section">
+      <%- include('../apipartials/music') %>
+    </div>
+    <hr>
+    <div id="event-section">
+      <%- include('../apipartials/events') %>
+    </div>
+    <hr>
+    <div id="news-section">
+      <%- include('../apipartials/news') %>
+    </div>
+    <hr>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/app.js"></script>
 </body>
 
 </html>
