@@ -4,11 +4,10 @@
 
 h1 {
     font-size: 30px;
-    justify-self: center;
     font-family: 'Permanent Marker', cursive;
     margin-bottom: 30px;
-    
     color: #7E1344;
+    text-align: center;
 }
 main div, main div form section fieldset {
     display: flex;
@@ -19,8 +18,9 @@ main div form section, #tastediveform {
   display: flex;
 }
 
-#tastediveform article {
+main, #tastediveform article {
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -64,12 +64,6 @@ header{
     color: #7E1344 
 
 }
-/* input[type="radio"] {
-    opacity: 0;
-    position: fixed;
-    width: 0;
-    
-} */
 
 #locationInput {
     margin-left: 30px;
@@ -82,25 +76,18 @@ input[type="radio"]:checked + label {
 }
 
 form label {
-    /* border: orangered 2px solid; */
     margin-left: 30px;
     margin-bottom: 30px;
     padding: 3px;
-    /* justify-self: space-evenly; */
-    /* flex-wrap: wrap; */
     display: inline-block;
     background-color: #D776A2 ;
     border: orchid 1px solid;
     border-radius: 5px;
-    
-   
 }
+
 form label:hover {
     background-color: #E8A5C3;
 }
-/* form label: {
-    background-color: palegreen;
-} */
 
 #musicInput {
     margin-left: 30px;
@@ -108,7 +95,7 @@ form label:hover {
     font-size: 20px;
 }
 
-#showyelpbutton {
+#showyelpbutton, main div form section button {
     align-self: center;
     border: rebeccapurple 1px solid;
     border-radius: 10px;
@@ -131,6 +118,6 @@ form label:hover {
     font-family: 'Permanent Marker', cursive;
     color: rgb(94, 26, 73);
 }
-main button:hover {
+main button:hover, #finalsubmit:hover {
     background-color: rgb(231, 192, 210);
 }
