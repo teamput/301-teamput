@@ -1,11 +1,12 @@
 <% if(musicList) { %>
+  <h1>Here are some similar artists for you to check out!</h1>
 <% musicList.forEach(artist => { %>
-<h1>Here are some similar artists for you to check out!</h1>
 <section>
   <div>
     <h2><%= artist.name %></h2>
     <p><%= artist.teaser +" " + artist.wikilink  %></p>
   </div>
+  <div>
   <iframe width="190" height="150" src="<%= artist.youtubeLink %>" frameborder="0">
     <a href="<%= artist.youtubeLink %>">Youtube Channel for this artist</a>
   </iframe>
@@ -26,6 +27,7 @@
     <button type="submit">Save This Artist</button>
   </form>
   <% } %>
+  <button class="seeNextMusic"> See more artists </button>
   </div>
 </section>
 <% }) %>
