@@ -1,6 +1,6 @@
 main {
     /* margin-top: 100px; */
-    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(198, 247, 184);
     color: rgb(83, 114, 21);
     overflow: hidden;
     
@@ -61,18 +61,7 @@ a{
     text-decoration: none;
     color: #435029;
 }
-h2 {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size:19px;
-    background-color: rgb(147, 180, 80);
-    font-family: 'Bree Serif', serif;
-    text-align: center;
 
-    border-bottom: #1e2411 .5px solid;
-    margin-bottom: 10px;
-
-}
 p {
     padding-top: 5px;
 }
@@ -89,6 +78,23 @@ main > section {
     margin-bottom: 60px;
     margin-left: 10px;
     margin-right: 10px;
+}
+div section {
+    border-bottom: 2px black solid;
+    border-left: 2px black solid;
+    background-color: rgb(243, 237, 182);
+    padding: 10px;
+}
+h2 {
+    padding: unset;
+    font-size:19px;
+    background-color: rgb(147, 180, 80);
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+
+    border-bottom: #1e2411 .5px solid;
+    margin-bottom: 10px;
+
 }
 @media screen and (min-width: 480px) {
     main {
@@ -116,7 +122,6 @@ main > section {
         border-top: #1e2411 .5px solid;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    padding: 5px;
     }
 }
 
@@ -141,7 +146,7 @@ main > section {
     padding-bottom: 20px;
     border-top: solid black .2px;
     
-    background-color: rgb(252, 251, 250);
+    
     
 }
 #music-section section div {
@@ -182,7 +187,7 @@ main > section {
     margin-top: 30px;
 }
 #food-section section{
-    background-color: rgb(252, 251, 250);
+    
     width:480px;
     height:fit-content;
     /* overflow: hidden; */
@@ -211,7 +216,7 @@ color: #435029;
 }
 
 #event-section section {
-    background-color: rgb(252, 251, 250);
+    
     width:480px;
     border-top: solid black .2px; 
 }
@@ -259,7 +264,7 @@ color: #435029;
 /* news */
 
 #news-section section{
-    background-color: rgb(252, 251, 250);
+    
     display: flex;
     flex-direction:row;
     width:480px;
