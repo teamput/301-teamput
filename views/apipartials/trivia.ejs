@@ -1,17 +1,18 @@
 <% if (triviaList) { %>
 <h1>Train your brain - no pain, no gain.</h1>
-<% triviaList.forEach(question => { %>
+
+<% triviaList.forEach((question, index) => { %>
 <section>
-<div>
-  <h2>Category: <%= question.category %></h2>
-  <p>Question:<%= question.question %></p>
-  <p>- <%= question.correct_answer %></p>
+  <div>
+    <h2>Category: <%= question.category %></h2>
+    <p>Question: <%= question.question %></p>
+    <p class="trivia-<%= index %>" data-correct="true">- <%= question.correct_answer %></p>
 
-  <% question.incorrect_answers.forEach(answer => { %>
+    <% question.incorrect_answers.forEach(answer => { %>
 
-  <p>- <%= answer %></p>
+    <p class="trivia-<%= index %>" data-correct="false">- <%= answer %></p>
 
-  <% }) %>
+    <% }) %>
   </div>
 </section>
 <% }) %>

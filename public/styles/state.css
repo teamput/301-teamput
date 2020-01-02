@@ -1,0 +1,12 @@
+.correct {
+  background-color: rgb(200, 235, 130);
+}
+
+.incorrect {
+  background-color: rgb(197, 10, 35);
+  color: rgb(43, 5, 5);
+}
+
+[data-correct]:hover {
+  cursor: pointer;
+}
