@@ -40,73 +40,91 @@ function radioButtons() {
 }
 radioButtons();
 
-function foodOptions(){
-  
+function foodOptions() {
+
   let currentFood = 1;
   $('#food-section section').toggle();
   $(`#food-section section:nth-of-type(${currentFood})`).toggle();
-  
+
 
   $('.seeNextFood').on('click', () => {
     currentFood += 1;
     $(`#food-section section:nth-of-type(${currentFood})`).slideDown();
   })
-  
+
 }
 foodOptions();
 
-function musicOptions(){
-  
+function musicOptions() {
+
   let currentmusic = 1;
   $('#music-section section').toggle();
   $(`#music-section section:nth-of-type(${currentmusic})`).toggle();
-  
+
 
   $('.seeNextMusic').on('click', () => {
     currentmusic += 1;
     $(`#music-section section:nth-of-type(${currentmusic})`).slideDown();
   })
-  
+
 }
 musicOptions();
 
 
-function eventOptions(){
-  
+function eventOptions() {
+
   let currentevent = 1;
   $('#event-section section').toggle();
   $(`#event-section section:nth-of-type(${currentevent})`).toggle();
-  
+
 
   $('.seeNextEvent').on('click', () => {
     currentevent += 1;
     $(`#event-section section:nth-of-type(${currentevent})`).slideDown();
   })
-  
+
 }
 eventOptions();
 
-function newsOptions(){
-  
+function newsOptions() {
+
   let currentnews = 1;
   $('#news-section section').toggle();
   $(`#news-section section:nth-of-type(${currentnews})`).toggle();
-  
+
 
   $('.seeNextNews').on('click', () => {
     currentnews += 1;
     $(`#news-section section:nth-of-type(${currentnews})`).slideDown();
   })
-  
+
 }
 newsOptions();
 
 
-// changing colors of selected trivia answers
-$('[data-correct=true]').click(function () {
-  $(this).toggleClass('correct');
-});
-$('[data-correct=false]').click(function () {
-  $(this).toggleClass('incorrect');
-});
 
+// randomizing order of trivia questions
+$(function shuffle() {
+  $('div.trivia-answers').each(function () {
+    let answers = $(this).find('p');
+    for (let i = 0; i < answers.length; i++) $(answers[i]).remove();
+    // 'fisher yates algorithm' http://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
+    let i = answers.length;
+    while (--i) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let tempi = answers[i];
+      let tempj = answers[j];
+      answers[i] = tempj;
+      answers[j] = tempi;
+    }
+    for (i = 0; i < answers.length; i++) $(answers[i]).appendTo(this);
+  });
+
+  // changing colors of selected trivia answers
+  $('[data-correct=true]').click(function () {
+    $(this).toggleClass('correct');
+  });
+  $('[data-correct=false]').click(function () {
+    $(this).toggleClass('incorrect');
+  });
+});

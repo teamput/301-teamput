@@ -6,13 +6,15 @@
   <div>
     <h2>Category: <%= question.category %></h2>
     <p>Question: <%= question.question %></p>
-    <p class="trivia-<%= index %>" data-correct="true">- <%= question.correct_answer %></p>
+    <div class="trivia-answers">
+      <p class="trivia-<%= index %>" data-correct="true">- <%= question.correct_answer %></p>
 
-    <% question.incorrect_answers.forEach(answer => { %>
+      <% question.incorrect_answers.forEach(answer => { %>
 
-    <p class="trivia-<%= index %>" data-correct="false">- <%= answer %></p>
+      <p class="trivia-<%= index %>" data-correct="false">- <%= answer %></p>
 
-    <% }) %>
+      <% }) %>
+    </div>
   </div>
 </section>
 <% }) %>
