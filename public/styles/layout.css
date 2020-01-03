@@ -27,14 +27,13 @@ h1 {
     max-width: 64px;
 }
 button {
-    
     border-radius: 8px;
     border-style: none;
     border-top: .5px black solid;
     width: 130px;
-    height: 35px;
+    height: 45px;
     font-family: 'Bree Serif', serif;
-    font-size: 10px;
+    font-size: 16px;
 }
 #menu button {
     margin-top: 0%;
