@@ -27,7 +27,6 @@ h1 {
     max-width: 64px;
 }
 button {
-    
     border-radius: 8px;
     border-style: none;
     border-top: .5px black solid;
@@ -44,7 +43,8 @@ button {
 #wideMenu {
     visibility: hidden;
 }
-@media screen and (min-width: 481px) {
+
+@media (min-width: 480px) {
     #menu {
         visibility: hidden;
     }
