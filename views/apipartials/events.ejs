@@ -11,7 +11,7 @@
   </div>
   <p><%- event.description %></p>
   <span>
-    <button><a href="<%= event.url %>">More Info</a></button>
+      <form style="display: inline" action="<%= event.url %>" method="get"><button>More Info</button></form>
     <% if (displayFavs) { %>
     <form action="<%= '/favorites/events?_method=DELETE' %>" method="post">
       <input type="hidden" name="url" value="<%= event.url %>">

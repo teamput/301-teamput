@@ -42,6 +42,8 @@ button {
 }
 #wideMenu {
     visibility: hidden;
+    position: fixed;
+    top: 0px;
 }
 @media screen and (min-width: 481px) {
     #menu {
@@ -62,10 +64,11 @@ button {
     #wideMenu {
         visibility: visible;
         width: 100%;
-        padding-top: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         height: fit-content;
         margin-top: 0px;
-        
+        position: unset;
     }
     #wideMenu ul {
         display: flex;

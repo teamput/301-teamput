@@ -26,10 +26,20 @@
     <div id="menu">
       <!-- this is hidden until hamburger menu is clicked -->
       <ul>
-        <li><a href="/aboutUs"> About the Devs</a></li>
-        <li><a href="/favorites">View My Favorites</a></li>
-        <li><a href="/result">My Most Recent Results</a></li>
-        <li><a href="/">Home</a></li>
+          <li>
+              <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
+          </li>
+          <li>
+              <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button>
+              </form>
+          </li>
+          <li>
+              <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button>
+              </form>
+          </li>
+          <li>
+              <form style="display: inline" action="/" method="get"><button>Home</button></form>
+          </li>
       </ul>
     </div>
   </header>
