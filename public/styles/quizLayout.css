@@ -2,10 +2,13 @@
     outline: none;
 }
 
-#formArea {
-  width: 480px;
-  height: 100%;
-
+#form-area {
+   background-image: url(../images/looking.png);
+    background-size:140px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  height: 800px;
+  background-color: rgb(201, 247, 247);
 }
 
 header{
