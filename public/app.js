@@ -10,26 +10,7 @@ $(function mobileClick() {
     $('#menu').slideToggle();
   });
 })
-// mobileClick();
 
-// $.ajax({
-//   type: 'POST',
-//   dataType: 'json',
-// }).then(results => {
-//   console.log(results.body);
-// })
-
-// $(main).click(
-//     alert('bla')
-// )
-
-// function radio_toolbar_click(ev) {
-//     let checked = document.querySelector('input[name="hunger"]:checked');
-//     if (checked) {
-//         checked.checked = false;
-//     }
-//     ev.target.previousElementSibling.checked = true;
-// }
 
 function radioButtons() {
   //on clicking a radio button
