@@ -39,7 +39,8 @@ body {
 h1 {
     font-size: 30px;
     font-family: 'Permanent Marker', cursive;
-    color: #7E1344;
+    background-color: rgb(106, 194, 197);
+    text-align: center;
 }
 
 main div, main div form section fieldset {
@@ -90,6 +91,37 @@ fieldset {
     display: flex;
     flex-direction: row;
     font-size: 20px;
+    width: 480px;
+}
+
+main {
+    color: rgb(58, 9, 31) ;
+    margin-top: 75px;
+    background-color: rgb(245, 245, 245);
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+#hamburger{
+    background-color: rgb(107, 187, 174);
+    border: solid 1px   rgb(73, 136, 125) ;
+    border-radius: 10px;
+    
+}
+
+#hamburger:hover {
+    background-color: rgb(160, 221, 206);
+}
+
+
+#menu button:hover {
+    background-color:rgb(160, 221, 206) ;
+}
+
+header{
+    color: #7E1344 
 }
 
 input[type="radio"]:checked + label {

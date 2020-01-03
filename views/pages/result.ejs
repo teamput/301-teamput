@@ -26,26 +26,45 @@
         <div id="menu">
             <!-- this is hidden until hamburger menu is clicked -->
             <ul>
-                <li><button><a href="/aboutUs"> About the Devs</a></button></li>
-                <li><button><a href="/favorites">View My Favorites</a></button></li>
-                <li><button><a href="/result">My Most Recent Results</a></button></li>
-                <li><button><a href="/">Home</a></button></li>
+                <li>
+                    <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
+                </li>
+                <li>
+                    <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button>
+                    </form>
+                </li>
+                <li>
+                    <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button>
+                    </form>
+                </li>
+                <li>
+                    <form style="display: inline" action="/" method="get"><button>Home</button></form>
+                </li>
             </ul>
         </div>
     </header>
-    
+
     <h1>Lets cure that boredom!</h1>
     <div id="wideMenu">
-            <!-- this is hidden until hamburger menu is clicked -->
-            <ul>
-                <li><form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form></li>
-                <li><form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form></li>
-                <li><form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form></li>
-                <li><form style="display: inline" action="/" method="get"><button>Home</button></form></li>
-                
-            </ul>
-            <hr>
-        </div>
+        <!-- this is hidden until hamburger menu is clicked -->
+        <ul>
+            <li>
+                <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
+            </li>
+            <li>
+                <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form>
+            </li>
+            <li>
+                <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button>
+                </form>
+            </li>
+            <li>
+                <form style="display: inline" action="/" method="get"><button>Home</button></form>
+            </li>
+
+        </ul>
+        <hr>
+    </div>
     <main>
         <div id="food-section">
             <%- include('../apipartials/yelp') %>
@@ -55,6 +74,9 @@
             <%- include('../apipartials/music') %>
         </div>
         <hr>
+        <div id="funPic">
+            <img src="/images/fun.png">
+        </div>
         <div id="event-section">
             <%- include('../apipartials/events') %>
         </div>
