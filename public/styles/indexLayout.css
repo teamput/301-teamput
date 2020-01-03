@@ -25,6 +25,9 @@ h1 {
     border: solid 1px #2F3C83;
     
 }
+#menu button:hover {
+    background-color:rgb(160, 165, 194) ;
+}
 main {
     background-color: rgb(212, 215, 233);
     height: 600px;

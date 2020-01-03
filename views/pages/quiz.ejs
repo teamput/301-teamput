@@ -26,137 +26,145 @@
     </section>
 
 
-        <div id="menu">
-            <!-- this is hidden until hamburger menu is clicked -->
-            <ul>
-                    <li>
-                            <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
-                        </li>
-                        <li>
-                            <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button>
-                            </form>
-                        </li>
-                        <li>
-                            <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button>
-                            </form>
-                        </li>
-                        <li>
-                            <form style="display: inline" action="/" method="get"><button>Home</button></form>
-                        </li>
-            </ul>
-        </div>
-    </header>
-
-    <h1>Let's find you something to do.</h1>
-    <div id="wideMenu">
-            <!-- this is hidden until hamburger menu is clicked -->
-            <ul>
-                <li><form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form></li>
-                <li><form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form></li>
-                <li><form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form></li>
-                <li><form style="display: inline" action="/" method="get"><button>Home</button></form></li>
-                
-            </ul>
-            <hr>
-        </div>
-    <div>
-
-      <form id="details-form" action="<%= '/quiz?_method=PUT' %>" method='post'>
-
-        <section id="locationform">
-
-          <fieldset>
-            <h3>Where do you live?</h3>
-            <input id="locationInput" type="text" name="location" placeholder="last location" required>
-          </fieldset>
-          <button id="showyelpbuttonfwd" type="button">></button>
-        </section>
-
-        <section id="yelpform">
-          <button id="showlocationbutton" type="button">
-            <</button> <fieldset>
-              <h3> Are you feeling hungry?</h3>
-              <label for="yes">Yes
-                <input type="radio" name="hunger" value="yes" required>
-              </label>
-              <label for="no">No
-                <input type="radio" name="hunger" value="no" required>
-              </label>
-              </fieldset>
-              <button id="showtriviabuttonfwd" type="button">></button>
-        </section>
-        <section id="trivia">
-          <button id="showyelpbuttonbk" type="button">
-            <</button> <fieldset>
-              <h3>Select a trivia category:</h3>
-              <label for="animals">Animals
-                <input type="radio" name="trivia" value="animals" required>
-              </label>
-              <label for="celebrities">Celebrities
-                <input type="radio" name="trivia" value="celebrities" required>
-              </label>
-              <label for="computers">Computer Science
-                <input type="radio" name="trivia" value="computers" required>
-              </label>
-              <label for="sports">Sports
-                <input type="radio" name="trivia" value="sports" required>
-              </label>
-              <label for="politics">Politics
-                <input type="radio" name="trivia" value="politics" required>
-              </label>
-              <label for="history">History
-                <input type="radio" name="trivia" value="history" required>
-              </label>
-              <label for="science-nature">Science and Nature
-                <input type="radio" name="trivia" value="science-nature" required>
-              </label>
-              </fieldset>
-              <button id="showeventsbuttonfwd" type="button">></button>
-        </section>
-
-
-        <section id="eventfulform">
-          <button id="showtriviabuttonbk" type="button">
-            <</button> <fieldset>
-              <h3>Choose your top interest from this list.</h3>
-              <label for="concerts">Concerts
-                <input type="radio" name="interest" value="concert" required>
-              </label>
-              <label for="festivals">Festivals
-                <input type="radio" name="interest" value="festivals" required>
-              </label>
-              <label for="comedy">Comedy
-                <input type="radio" name="interest" value="comedy" required>
-              </label>
-              <label for="family">Family
-                <input type="radio" name="interest" value="family" required>
-              </label>
-              <label for="nightlife">Nightlife
-                <input type="radio" name="interest" value="nightlife" required>
-              </label>
-              <label for="performing arts">Performing Arts
-                <input type="radio" name="interest" value="performing arts" required>
-              </label>
-              <label for="sports">Sports
-                <input type="radio" name="interest" value="sports" required>
-              </label>
-              </fieldset>
-              <button id="showmusicbuttonfwd" type="button">></button>
-        </section>
-
-        <section id="tastediveform">
-
-          <button id="showeventsbuttonbk" type="button">
-            <</button> <article>
-              <fieldset>
-                <h3>Type in your favorite artist here:</h3>
-                <input id="musicInput" type="text" name="music" placeholder="musician">
-              </fieldset>
-              <button id="finalsubmit" type="submit">Un-bore Me</button>
-              </article>
-        </section>
-      </form>
+    <div id="menu">
+      <!-- this is hidden until hamburger menu is clicked -->
+      <ul>
+        <li>
+          <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button>
+          </form>
+        </li>
+        <li>
+          <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button>
+          </form>
+        </li>
+        <li>
+          <form style="display: inline" action="/" method="get"><button>Home</button></form>
+        </li>
+      </ul>
     </div>
+  </header>
+
+  <h1>Let's find you something to do.</h1>
+  <div id="wideMenu">
+    <!-- this is hidden until hamburger menu is clicked -->
+    <ul>
+      <li>
+        <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
+      </li>
+      <li>
+        <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form>
+      </li>
+      <li>
+        <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form>
+      </li>
+      <li>
+        <form style="display: inline" action="/" method="get"><button>Home</button></form>
+      </li>
+
+    </ul>
+    <hr>
+  </div>
+  <div>
+
+    <form id="details-form" action="<%= '/quiz?_method=PUT' %>" method='post'>
+
+      <section id="locationform">
+
+        <fieldset>
+          <h3>Where do you live?</h3>
+          <input id="locationInput" type="text" name="location" placeholder="last location" required>
+        </fieldset>
+        <button id="showyelpbuttonfwd" type="button">></button>
+      </section>
+
+      <section id="yelpform">
+        <button id="showlocationbutton" type="button">
+          <</button> <fieldset>
+            <h3> Are you feeling hungry?</h3>
+            <label for="yes">Yes
+              <input type="radio" name="hunger" value="yes" required>
+            </label>
+            <label for="no">No
+              <input type="radio" name="hunger" value="no" required>
+            </label>
+            </fieldset>
+            <button id="showtriviabuttonfwd" type="button">></button>
+      </section>
+      <section id="trivia">
+        <button id="showyelpbuttonbk" type="button">
+          <</button> <fieldset>
+            <h3>Select a trivia category:</h3>
+            <label for="animals">Animals
+              <input type="radio" name="trivia" value="animals" required>
+            </label>
+            <label for="celebrities">Celebrities
+              <input type="radio" name="trivia" value="celebrities" required>
+            </label>
+            <label for="computers">Computer Science
+              <input type="radio" name="trivia" value="computers" required>
+            </label>
+            <label for="sports">Sports
+              <input type="radio" name="trivia" value="sports" required>
+            </label>
+            <label for="politics">Politics
+              <input type="radio" name="trivia" value="politics" required>
+            </label>
+            <label for="history">History
+              <input type="radio" name="trivia" value="history" required>
+            </label>
+            <label for="science-nature">Science and Nature
+              <input type="radio" name="trivia" value="science-nature" required>
+            </label>
+            </fieldset>
+            <button id="showeventsbuttonfwd" type="button">></button>
+      </section>
+
+
+      <section id="eventfulform">
+        <button id="showtriviabuttonbk" type="button">
+          <</button> <fieldset>
+            <h3>Choose your top interest from this list.</h3>
+            <label for="concerts">Concerts
+              <input type="radio" name="interest" value="concert" required>
+            </label>
+            <label for="festivals">Festivals
+              <input type="radio" name="interest" value="festivals" required>
+            </label>
+            <label for="comedy">Comedy
+              <input type="radio" name="interest" value="comedy" required>
+            </label>
+            <label for="family">Family
+              <input type="radio" name="interest" value="family" required>
+            </label>
+            <label for="nightlife">Nightlife
+              <input type="radio" name="interest" value="nightlife" required>
+            </label>
+            <label for="performing arts">Performing Arts
+              <input type="radio" name="interest" value="performing arts" required>
+            </label>
+            <label for="sports">Sports
+              <input type="radio" name="interest" value="sports" required>
+            </label>
+            </fieldset>
+            <button id="showmusicbuttonfwd" type="button">></button>
+      </section>
+
+      <section id="tastediveform">
+
+        <button id="showeventsbuttonbk" type="button">
+          <</button> <article>
+            <fieldset>
+              <h3>Type in your favorite artist here:</h3>
+              <input id="musicInput" type="text" name="music" placeholder="musician">
+            </fieldset>
+            <button id="finalsubmit" type="submit">Un-bore Me</button>
+            </article>
+      </section>
+    </form>
+  </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="/app.js"></script>
