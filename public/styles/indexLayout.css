@@ -35,8 +35,7 @@ main {
     background-size:480px;
     background-repeat: no-repeat;
     background-position: bottom;
-    display: flex;
-  
+    /* display: flex; */
 }
 @media (max-width: 480px) {
     main {
@@ -53,7 +52,6 @@ main div:nth-of-type(1){
  }
  main div:nth-of-type(1) h2{
    font-size: 30px;
-  width: 300px;
  }
  /* begin button */
  main div button:hover {
@@ -62,7 +60,7 @@ main div:nth-of-type(1){
  }
 
 main div button {
-    width: fit-content;
+    /* width: fit-content; */
     font-size: 40px;
     height: fit-content;
     color: #1A2667;
@@ -74,4 +72,13 @@ main div button {
     border-left: 5px #1A2667 solid;
     border-bottom: 2px #1A2667 solid;
     border-right: none;
+    display: flex;
+    justify-content: center;
+}
+
+main div {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
