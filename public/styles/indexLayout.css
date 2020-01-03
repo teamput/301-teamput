@@ -8,13 +8,14 @@
 }
 h1 {
     font-size: 65px;
-    background-color: teal;
+    background-color: #2F3C83;
 }
-h2 {
-    
-}
+
 #wideMenu {
     background-color: #9CA5D1;
+}
+#wideMenu button:hover {
+    background-color: rgb(108, 115, 155);
 }
 #hamburger:hover {
     background-color: #9CA5D1;
@@ -24,18 +25,22 @@ h2 {
     border: solid 1px #2F3C83;
     
 }
+#menu button:hover {
+    background-color:rgb(160, 165, 194) ;
+}
 main {
     background-color: rgb(212, 215, 233);
-    
-    /* border: 2px black solid; */
     height: 600px;
     background-image: url(../images/bored.png);
     background-size:480px;
-    background-color: rgb(212, 217, 245);
     background-repeat: no-repeat;
     background-position: bottom;
-    display: flex;
-    /* flex-direction: column; */
+    /* display: flex; */
+}
+@media (max-width: 480px) {
+    main {
+        padding-left: 70px;
+    }    
 }
 /* im bored div */
 main div:nth-of-type(1){
@@ -47,34 +52,33 @@ main div:nth-of-type(1){
  }
  main div:nth-of-type(1) h2{
    font-size: 30px;
-  
  }
  /* begin button */
- main div div{
-    width: fit-content;
+ main div button:hover {
+     background-color:  #6A75AF;
+     color: rgb(31, 30, 30);
+ }
+
+main div button {
+    /* width: fit-content; */
     font-size: 40px;
     height: fit-content;
     color: #1A2667;
     margin-top: 20px;
-    display: flex;
-    align-self: center;
-    justify-content: center;
     padding: 10px;
-    /* border: rgb(211, 238, 156) 2px solid; */
-    background-color: #6A75AF;
+    background-color: #9CA5D1;
     border: #475496 1px solid;
     border-radius: 10px;
     border-left: 5px #1A2667 solid;
     border-bottom: 2px #1A2667 solid;
     border-right: none;
- }
+    display: flex;
+    justify-content: center;
+}
 
- main div div:hover {
-     background-color: #9CA5D1;
-     color: rgb(238, 0, 0);
- }
-main div div a {
-    text-decoration: none;
-    width: 100%;
-    align-self: center;
+main div {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

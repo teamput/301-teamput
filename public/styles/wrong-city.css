@@ -2,7 +2,7 @@
 #wrong-city{
     font-family: 'Permanent Marker', cursive;
     text-align: center;
-    width:480px;
+    width:960px;
     font-size: 40px;
     background-color: red;
     border: solid lightskyblue 5px;
@@ -10,10 +10,12 @@
     margin-top: 100px;
     margin-left: 200px;
     padding-left:5px;
+    color: white;
 }
 #city-button{
     width: 100px;
     height:50px;
-    color:black;
+    color:red;
     font-family: 'Permanent Marker', cursive;
+    margin: 10px;
 }

@@ -3,7 +3,7 @@ main {
     background-color: rgb(198, 247, 184);
     color: rgb(83, 114, 21);
     overflow: hidden;
-    
+    padding: 10px;
     
 }
 #hamburger{
@@ -47,7 +47,10 @@ h1{
     color: white;
     text-shadow: rgb(75, 75, 75) 1px 1px;
 }
-
+h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 body > h1{
     font-family: 'Permanent Marker', cursive;
     font-size: 45px;
@@ -69,7 +72,7 @@ button {
     width: 130px;
     height: 35px;
     font-family: 'Bree Serif', serif;
-    font-size: 10px;
+    font-size: 36px;
     margin-top: 10px;
 }
 
@@ -78,15 +81,18 @@ main > section {
     margin-bottom: 60px;
     margin-left: 10px;
     margin-right: 10px;
+    max-width: 100%;
 }
-div section {
-    border-bottom: 2px black solid;
-    border-left: 2px black solid;
+div > section {
+    border-bottom:1px black solid;
+    border-left:1px black solid;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     background-color: rgb(243, 237, 182);
-    padding: 10px;
+    overflow: hidden;
+    
 }
 h2 {
-    padding: unset;
     font-size:19px;
     background-color: rgb(147, 180, 80);
     font-family: 'Bree Serif', serif;
@@ -96,7 +102,7 @@ h2 {
     margin-bottom: 10px;
 
 }
-@media screen and (min-width: 480px) {
+@media(min-width: 480px) {
     main {
         display: flex;
         flex-direction: row;
@@ -125,7 +131,9 @@ h2 {
     }
 }
 
-
+#funPic img{
+    width: 490px;
+}
 /* music */
 
 #music-section p{
@@ -295,7 +303,10 @@ color: #435029;
     background-color: #b8d877;
     color: #555555;
 }
-
+#news-section p {
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
 /* trivia */
 #trivia-section {
     line-height: 1.2em;
@@ -310,13 +321,14 @@ color: #435029;
 
 .trivia-answers p{
     border: 1px solid rgb(147, 180, 80);
+    border-top: 0.5px solid black;
     border-radius: 8px;    
     width: 130px;
     padding: 5px;
-    margin: 5px auto;
+    margin: 5px;
     text-align: center;
     font-family: 'Bree Serif', serif;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 #trivia-section section div p {
@@ -324,8 +336,12 @@ color: #435029;
     margin-bottom: 5px;
 }
 
-#trivia-section section div p:hover {
+.trivia-answers p:hover {
     background-color: #b8d877;
     color: #555555;
+}
 
+button.seeNextTrivia {
+    background-color: #ccdab0;
+    color: #435029;
 }
