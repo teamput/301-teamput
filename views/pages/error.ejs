@@ -2,18 +2,27 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/error.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Permanent+Marker&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>404 Not Found</title>
 </head>
 
+
 <body>
-    <h2>Oops!</h2>
-    <p>Something went wrong. Try again!</p>
-    <form action="/" method="get">
-        <button type="submit">Start Over</button>
-    </form>
+    <div id="error-div">
+        <h2>Oops!</h2>
+        <p>Oops, an error occurred! </p>
+        <form action="/" method="get">
+            <button id="error-button" type="submit">Start Over</button>
+        </form>
+    </div>
 </body>
+
 
 </html>
