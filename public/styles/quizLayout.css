@@ -2,13 +2,47 @@
     outline: none;
 }
 
+html {
+  width: 480px;
+  height: 100%;
+}
+
+header{
+    color: #7E1344 
+}
+
+#menu{
+  background-color: #D776A2 ;
+  border: solid 1px #7E1344;
+}
+
+#hamburger{
+    background-color: rgb(245, 245, 245);
+    border: solid 1px  #7E1344 ;
+    border-radius: 10px;
+}
+
+#hamburger:hover {
+    background-color: #D776A2;
+}
+
+main {
+    color: rgb(58, 9, 31) ;
+    margin-top: 75px;
+    background-color: rgb(245, 245, 245);
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+}
+
 h1 {
     font-size: 30px;
     font-family: 'Permanent Marker', cursive;
-    /* color: #7E1344; */
     background-color: rgb(106, 194, 197);
     text-align: center;
 }
+
 main div, main div form section fieldset {
     display: flex;
     justify-content: center;
@@ -33,6 +67,10 @@ form section {
   margin: 20px;
 }
 
+#details-form section fieldset {
+  margin: 10px;
+}
+
 form section button:nth-of-type(1) {
   margin-left: 5px;
 }
@@ -41,6 +79,7 @@ h3 {
   font-family: 'Permanent Marker', cursive;
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 hr {
@@ -83,13 +122,6 @@ body {
 
 header{
     color: #7E1344 
-
-}
-
-#locationInput {
-    margin-left: 30px;
-    width: 400px;
-    font-size: 20px;
 }
 
 input[type="radio"]:checked + label {
@@ -97,13 +129,13 @@ input[type="radio"]:checked + label {
 }
 
 form label {
-    margin-left: 30px;
     margin-bottom: 30px;
     padding: 3px;
     display: inline-block;
     background-color: #D776A2 ;
     border: orchid 1px solid;
     border-radius: 5px;
+    color: white;
     text-align: center;
 }
 
@@ -111,10 +143,13 @@ form label:hover {
     background-color: #E8A5C3;
 }
 
+#locationInput, #musicInput {
+  font-size: 20px;
+  text-align: center;
+}
+
 #musicInput {
-    margin-left: 30px;
-    width: 400px;
-    font-size: 20px;
+  margin-left: 30px;
 }
 
 #showyelpbutton, main div form section button {
@@ -135,18 +170,24 @@ main div form section button {
     margin-top: 30px;
     margin-bottom: 50px;
     width: 200px;
-    height: 200px;
+    height: 100px;
     align-self: center;
     border: rebeccapurple 1px solid;
-    border-radius: 10px;
     background-color: #E8A5C3;
     font-size: 30px;
     font-family: 'Permanent Marker', cursive;
     color: rgb(94, 26, 73);
+    margin-right: 15px;
 }
 
 main button:hover, #finalsubmit:hover {
     background-color: rgb(231, 192, 210);
 }
 
-/* media query for form should go below */
+/* desktop */
+@media (min-width: 480px) {
+  html {
+    width: 100%;
+    min-width: 960px;
+  }
+}
