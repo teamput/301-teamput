@@ -3,7 +3,7 @@ main {
     background-color: rgb(198, 247, 184);
     color: rgb(83, 114, 21);
     overflow: hidden;
-    
+    padding: 10px;
     
 }
 #hamburger{
@@ -69,7 +69,7 @@ button {
     width: 130px;
     height: 35px;
     font-family: 'Bree Serif', serif;
-    font-size: 10px;
+    font-size: 36px;
     margin-top: 10px;
 }
 
@@ -79,14 +79,16 @@ main > section {
     margin-left: 10px;
     margin-right: 10px;
 }
-div section {
-    border-bottom: 2px black solid;
-    border-left: 2px black solid;
+div > section {
+    border-bottom:1px black solid;
+    border-left:1px black solid;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     background-color: rgb(243, 237, 182);
-    padding: 10px;
+    overflow: hidden;
+    
 }
 h2 {
-    padding: unset;
     font-size:19px;
     background-color: rgb(147, 180, 80);
     font-family: 'Bree Serif', serif;
@@ -125,7 +127,9 @@ h2 {
     }
 }
 
-
+#funPic img{
+    width: 490px;
+}
 /* music */
 
 #music-section p{

@@ -13,7 +13,7 @@
   </div>
   <div>
     <img src="<%=article.image %>">
-    <button><a href="<%= article.web_url %>">Read The Article on NYTimes.com</a></button>
+    <form style="display: inline" action="<%= article.web_url %>" method="get"><button>Read The Article on NYTimes.com</button></form>
     <% if (displayFavs) { %>
     <form action="<%= '/favorites/news?_method=DELETE' %>" method="post">
       <input type="hidden" name="headline" value="<%= article.headline %>">

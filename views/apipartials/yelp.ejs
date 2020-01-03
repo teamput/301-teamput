@@ -15,7 +15,7 @@
       <li><%= 'Price range: ' + restaurant.price %></li>
       <li><%= restaurant.phone %></li>
     </ul>
-    <button><a href="<% restaurant.url %>"> View details </a></button>
+    <form style="display: inline" action="<% restaurant.url %>" method="get"><button> View details</button></form>
     <% if (displayFavs) { %>
     <form action="<%= '/favorites/yelp?_method=DELETE' %>" method="post">
       <input type="hidden" name="id" value="<%= restaurant.id %>">
