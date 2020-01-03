@@ -1,11 +1,20 @@
-body {
-    background-color: rgb(212, 215, 233);
-}
+/* body {
+} */
 #hamburger{
     background-color: #6A75AF;
     border: solid 1px #2F3C83;
     border-radius: 10px;
     
+}
+h1 {
+    font-size: 65px;
+    background-color: teal;
+}
+h2 {
+    
+}
+#wideMenu {
+    background-color: #9CA5D1;
 }
 #hamburger:hover {
     background-color: #9CA5D1;
@@ -13,10 +22,11 @@ body {
 #menu{
     background-color: #9CA5D1 ;
     border: solid 1px #2F3C83;
-
+    
 }
 main {
-    margin-top: 80px;
+    background-color: rgb(212, 215, 233);
+    
     /* border: 2px black solid; */
     height: 600px;
     background-image: url(../images/bored.png);
@@ -25,34 +35,22 @@ main {
     background-repeat: no-repeat;
     background-position: bottom;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 /* im bored div */
- main div:nth-of-type(1){
-    width: 100%;
+main div:nth-of-type(1){
+    /* width: 100%; */
     height: fit-content;
     color: #2F3C83;
-    margin-top: 20px;
-    display: flex;
-    /* align-content: space-between; */
-    justify-content: flex-end;
-    /* border: olivedrab 2px solid; */
-    flex-direction: column;
+    /* margin-top: 20px; */
     
- }
- main div:nth-of-type(1) h1{
-   font-size: 50px;
- 
  }
  main div:nth-of-type(1) h2{
    font-size: 30px;
-   margin-top: 20px;
-   width: 100%;
   
-   justify-self: right;
  }
  /* begin button */
- main div:nth-of-type(2){
+ main div div{
     width: fit-content;
     font-size: 40px;
     height: fit-content;
@@ -70,15 +68,13 @@ main {
     border-bottom: 2px #1A2667 solid;
     border-right: none;
  }
- #quiz-link{
-     /* margin-left: 180px; */
- }
- main div:nth-of-type(2):hover {
+
+ main div div:hover {
      background-color: #9CA5D1;
      color: rgb(238, 0, 0);
  }
-main div:nth-of-type(2) a {
+main div div a {
     text-decoration: none;
     width: 100%;
-    justify-self: center;
+    align-self: center;
 }
