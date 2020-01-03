@@ -10,3 +10,14 @@
 [data-correct]:hover {
   cursor: pointer;
 }
+
+#details-form section fieldset, #finalsubmit {
+  animation-name: showhide;
+  animation-duration: 0.8s;
+}
+
+@keyframes showhide {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  

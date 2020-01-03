@@ -38,25 +38,31 @@
   <main>
     <h1>Let's find you something to do.</h1>
     <div id="wideMenu">
-            <!-- this is hidden until hamburger menu is clicked -->
-            <ul>
-                <li><form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form></li>
-                <li><form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form></li>
-                <li><form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form></li>
-                <li><form style="display: inline" action="/" method="get"><button>Home</button></form></li>
-                
-            </ul>
-            <hr>
-        </div>
-    <div>
+      <!-- this is hidden until hamburger menu is clicked -->
+      <ul>
+        <li>
+          <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/" method="get"><button>Home</button></form>
+        </li>
+
+      </ul>
+    </div>
+    <div id="form-area">
 
       <form id="details-form" action="<%= '/quiz?_method=PUT' %>" method='post'>
 
         <section id="locationform">
-
           <fieldset>
             <h3>Where do you live?</h3>
-            <input id="locationInput" type="text" name="location" placeholder="last location" required>
+            <input id="locationInput" type="text" name="location" placeholder="Enter city..." required>
           </fieldset>
           <button id="showyelpbuttonfwd" type="button">></button>
         </section>
@@ -74,6 +80,7 @@
               </fieldset>
               <button id="showtriviabuttonfwd" type="button">></button>
         </section>
+
         <section id="trivia">
           <button id="showyelpbuttonbk" type="button">
             <</button> <fieldset>
@@ -134,16 +141,16 @@
         </section>
 
         <section id="tastediveform">
-
           <button id="showeventsbuttonbk" type="button">
             <</button> <article>
               <fieldset>
                 <h3>Type in your favorite artist here:</h3>
-                <input id="musicInput" type="text" name="music" placeholder="musician">
+                <input id="musicInput" type="text" name="music" placeholder="Enter musician...">
               </fieldset>
               <button id="finalsubmit" type="submit">Un-bore Me</button>
               </article>
         </section>
+
       </form>
     </div>
   </main>

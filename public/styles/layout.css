@@ -10,7 +10,6 @@ header {
     /* flex-direction: row; */
 }
 h1 {
-    
     border-top: #1e2411 .5px solid;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -27,23 +26,24 @@ h1 {
     max-width: 64px;
 }
 button {
-    
     border-radius: 8px;
     border-style: none;
     border-top: .5px black solid;
-    width: 130px;
     height: 35px;
     font-family: 'Bree Serif', serif;
     font-size: 10px;
 }
+
 #menu button {
     margin-top: 0%;
     border-style: none;
     border-radius: unset;
 }
+
 #wideMenu {
     visibility: hidden;
 }
+
 @media screen and (min-width: 481px) {
     #menu {
         visibility: hidden;

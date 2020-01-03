@@ -164,7 +164,7 @@ function hideAndShowQuiz() {
     $('#locationform').show();
     clearInterval(id);
   };
-  let id = setInterval(showLocation, 1500);
+  let id = setInterval(showLocation, 500);
 
   $('#showyelpbuttonfwd').on('click', function () {
     $('#locationform').hide();
