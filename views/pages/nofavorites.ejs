@@ -35,32 +35,32 @@
       </ul>
     </div>
   </header>
-  
-  <h1>Favorites</h1>
-    <main>
-  <div id="wideMenu">
-    <!-- this is hidden until hamburger menu is clicked -->
-    <ul>
-      <li>
-        <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
-      </li>
-      <li>
-        <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form>
-      </li>
-      <li>
-        <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form>
-      </li>
-      <li>
-        <form style="display: inline" action="/" method="get"><button>Home</button></form>
-      </li>
 
-    </ul>
-  </div>
+  <h1>Favorites</h1>
+  <main>
+    <div id="wideMenu">
+      <!-- this is hidden until hamburger menu is clicked -->
+      <ul>
+        <li>
+          <form style="display: inline" action="/aboutUs" method="get"><button>About the Devs</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/favorites" method="get"><button>View My Favorites</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/result" method="get"><button>My Most Recent Results</button></form>
+        </li>
+        <li>
+          <form style="display: inline" action="/" method="get"><button>Home</button></form>
+        </li>
+
+      </ul>
+    </div>
 
     <div>
       <h4>You Don't Have Any Favorites Yet!</h4>
       <form action="/quiz" method="get">
-        <button type="submit">Take the Quiz!</button>
+        <button id="take-quiz" type="submit">Take the Quiz!</button>
       </form>
   </main>
 

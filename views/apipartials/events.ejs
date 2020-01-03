@@ -1,5 +1,5 @@
 <% if (eventsList) { %>
-  <h1>Events today near you!</h1>
+<h1>Events today near you!</h1>
 <% eventsList.forEach(event => { %>
 <section>
 
@@ -9,9 +9,9 @@
     <h4><%= event.start_time %></h4>
     <hr>
   </div>
-  <p><%- event.description %></p>
+  <p><%= event.description %></p>
   <span>
-    <button><a href="<%= event.url %>">More Info</a></button>
+    <form style="display: inline" action="<%= event.url %>" method="get"><button>More Info</button></form>
     <% if (displayFavs) { %>
     <form action="<%= '/favorites/events?_method=DELETE' %>" method="post">
       <input type="hidden" name="url" value="<%= event.url %>">

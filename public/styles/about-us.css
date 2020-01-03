@@ -1,6 +1,7 @@
 body{
     background-color: lightgreen;
     text-align: center;
+    width: 2000%;
 }
 img{
     width:480px;
@@ -31,7 +32,7 @@ h1{font-family: 'Permanent Marker', cursive;
     border-radius: 8px;
    
 }
-P{
+p{
     line-height: 18px;
     padding: 9px;
     width:480px;
