@@ -8,9 +8,7 @@ body {
 @media screen and (min-width: 481px) {
     body {
         box-sizing: border-box;
-        max-width: 1200px;
+        max-width: 100%;
         font-family: 'Gothic A1', sans-serif;
     }
-
-    
 }
