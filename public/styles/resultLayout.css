@@ -47,7 +47,10 @@ h1{
     color: white;
     text-shadow: rgb(75, 75, 75) 1px 1px;
 }
-
+h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 body > h1{
     font-family: 'Permanent Marker', cursive;
     font-size: 45px;
@@ -78,6 +81,7 @@ main > section {
     margin-bottom: 60px;
     margin-left: 10px;
     margin-right: 10px;
+    max-width: 100%;
 }
 div > section {
     border-bottom:1px black solid;
@@ -98,7 +102,7 @@ h2 {
     margin-bottom: 10px;
 
 }
-@media screen and (min-width: 480px) {
+@media(min-width: 480px) {
     main {
         display: flex;
         flex-direction: row;
@@ -299,7 +303,10 @@ color: #435029;
     background-color: #b8d877;
     color: #555555;
 }
-
+#news-section p {
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
 /* trivia */
 #trivia-section {
     line-height: 1.2em;
