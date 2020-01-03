@@ -150,3 +150,61 @@ $('.add-to-fav').on('click', function () {
     favBtn.text('Added To Favorites!');
   }
 });
+
+// hiding and showing one question at a time
+function hideAndShowQuiz() {
+  $('#locationform').hide();
+  $('#yelpform').hide();
+  $('#trivia').hide();
+  $('#eventfulform').hide();
+  $('#tastediveform').hide();
+  $('#finalsubmit').hide();
+
+  const showLocation = () => {
+    $('#locationform').show();
+    clearInterval(id);
+  };
+  let id = setInterval(showLocation, 1500);
+
+  $('#showyelpbuttonfwd').on('click', function () {
+    $('#locationform').hide();
+    $('#yelpform').show();
+  });
+
+  $('#showlocationbutton').on('click', function () {
+    $('#yelpform').hide();
+    $('#locationform').show();
+  });
+
+  $('#showtriviabuttonfwd').on('click', function () {
+    $('#yelpform').hide();
+    $('#trivia').show();
+  });
+
+  $('#showyelpbuttonbk').on('click', function () {
+    $('#trivia').hide();
+    $('#yelpform').show();
+  });
+
+  $('#showeventsbuttonfwd').on('click', function () {
+    $('#trivia').hide();
+    $('#eventfulform').show();
+  });
+
+  $('#showtriviabuttonbk').on('click', function () {
+    $('#eventfulform').hide();
+    $('#trivia').show();
+  });
+
+  $('#showmusicbuttonfwd').on('click', function () {
+    $('#eventfulform').hide();
+    $('#finalsubmit').show();
+    $('#tastediveform').show();
+  });
+
+  $('#showeventsbuttonbk').on('click', function () {
+    $('#tastediveform').hide();
+    $('#eventfulform').show();
+  });
+}
+$(document).ready(hideAndShowQuiz);

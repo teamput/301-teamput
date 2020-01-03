@@ -7,6 +7,6 @@
   color: rgb(43, 5, 5);
 }
 
-[data-correct]:hover {
+button:hover, [data-correct]:hover {
   cursor: pointer;
 }

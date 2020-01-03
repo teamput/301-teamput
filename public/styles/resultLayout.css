@@ -314,13 +314,14 @@ color: #435029;
 
 .trivia-answers p{
     border: 1px solid rgb(147, 180, 80);
+    border-top: 0.5px solid black;
     border-radius: 8px;    
     width: 130px;
     padding: 5px;
-    margin: 5px auto;
+    margin: 5px;
     text-align: center;
     font-family: 'Bree Serif', serif;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 #trivia-section section div p {
@@ -328,8 +329,12 @@ color: #435029;
     margin-bottom: 5px;
 }
 
-#trivia-section section div p:hover {
+.trivia-answers p:hover {
     background-color: #b8d877;
     color: #555555;
+}
 
+button.seeNextTrivia {
+    background-color: #ccdab0;
+    color: #435029;
 }
